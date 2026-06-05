@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage';
 import Becomefoundingclientpage from "./pages/becomefoundingclientpage.jsx";
 
 function App() {
-
+//
   return (
       <Router>
         <div className="app">

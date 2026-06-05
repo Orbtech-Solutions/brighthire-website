@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+}
+.navbar-links a {
+    text-decoration: none;
+}

@@ -1,4 +1,5 @@
 import './button.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Button = ({children,onClick,type= 'button',variant='primary' })=>{
     return (

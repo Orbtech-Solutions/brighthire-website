@@ -1,0 +1,96 @@
+
+.top-banner {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary) 60%);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 100px;
+}
+.top-banner .section-inner {
+    max-width: 1230px;
+    display: flex;
+    flex-direction: row;
+    gap: 75px;
+}
+
+/***** Left container *****/
+.top-banner .section-inner .left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Horizontal rule in banner uses the text-light color and fills width */
+.top-banner .line {
+    border: 0;
+    height: 1px;
+    background-color: var(--text-light);
+    width: 100%;
+    margin: 24px 0;
+    display: block;
+}
+.top-banner h1 span {
+    color: white;
+}
+.top-banner h1 {
+    color: var(--color-secondary);
+}
+.top-banner p {
+    color: white;
+    margin-bottom: 20px;
+}
+.top-banner .buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 30px;
+}
+.top-banner .buttons-container .buttons-row {
+    display: flex;
+    gap: 50px;
+    width: fit-content;
+}
+
+/***** Right Container *****/
+.top-banner .section-inner .right-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-banner .section-inner .right-container img {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.18);
+    display: block;
+}
+
+/******  Components ******/
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+}
+.stats-container .stat {
+    display: flex;
+    flex-direction: column;
+
+}
+.stats-container .stat p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.stats-container .stat h3 {
+    color: var(--color-secondary);
+    font-size: 24px;
+    margin: 0;
+    line-height: normal;
+}

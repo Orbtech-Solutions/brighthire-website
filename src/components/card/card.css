@@ -1,5 +1,5 @@
 /* ── Generic Card ────────────────────────────────────────────── */
-/* Card shell */
+  /* Card shell: base layout, padding, border and subtle shadow */
 .card {
   position: relative;
   display: flex;
@@ -20,12 +20,13 @@
 }
 
 .card:hover {
+  /* Hover state: lift the card and increase shadow for emphasis */
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(27, 43, 94, 0.18);
   border-color: rgba(27, 43, 94, 0.16);
 }
 
-/* Gold accent bar slides in on hover */
+/* Accent bar (decorative): slides in from the left on hover */
 .card-accent {
   position: absolute;
   bottom: 0;
@@ -43,7 +44,7 @@
   transform: scaleX(1);
 }
 
-/* Icon wrapper */
+/* Icon wrapper: fixed square to contain an icon or image */
 .card-icon-wrapper {
   display: flex;
   align-items: center;
@@ -57,17 +58,19 @@
 }
 
 .card:hover .card-icon-wrapper {
+  /* Icon wrapper hover: subtle tint and border change */
   background: rgba(97, 106, 255, 0.08);
   border-color: rgba(27, 43, 94, 0.2);
 }
 
 .card-icon {
+  /* Icon image sizing: keep icons consistent and centered */
   width: 26px;
   height: 26px;
   object-fit: contain;
 }
 
-/* Heading & body — no typography rules; style these in your own stylesheet */
+/* Heading & body — content elements; margins reset so global typography applies */
 .card-heading {
   margin: 0;
 }

@@ -15,8 +15,11 @@
 
   /* Colors */
   --color-primary: oklch(0.32 0.09 260);
+  /* Slightly richer darker blue for banner gradient */
+  --color-primary-dark: oklch(25.363% 0.10379 273.322);
   --color-secondary: oklch(0.78 0.13 82);
   --text-dark: oklch(0.48 0.03 258);
+  --text-light: oklch(76.676% 0.00009 271.152);
 
   --color-white: white;
   --color-black: black;

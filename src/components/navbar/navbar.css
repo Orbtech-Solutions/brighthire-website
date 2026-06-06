@@ -1,0 +1,55 @@
+:root {
+    --navbar-gap: 75px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo-image {
+    display: block;
+    max-height: 125px;
+    width: auto;
+}
+
+/* Navbar right */
+.navbar-right {
+    display:flex;
+    align-items: center;
+    gap: var(--navbar-gap);
+}
+.navbar-right ul {
+    display: flex;
+    gap: var(--navbar-gap);
+    list-style: none;
+}
+.navbar-right ul a {
+    text-decoration: none;
+    color: var(--color-primary);
+    position: relative;
+}
+.navbar-right ul a:hover {
+    font-weight: 400;
+}
+.navbar-right ul a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;                                    
+    height: 1.5px;                            
+    background-color: var(--color-primary);
+    transition: width 0.25s ease;
+}
+
+.navbar-right ul a:hover::after {
+    width: 100%;                                 
+}
+
+/* Keep the pseudo-element visible when the route is active */
+.navbar-right ul a.active::after {
+    width: 100%;
+}

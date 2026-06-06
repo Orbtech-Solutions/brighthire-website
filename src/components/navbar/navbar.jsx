@@ -1,33 +1,32 @@
-import { Link,useNavigate} from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Button from '../buttons/button.jsx';
-import './styles/navbar.css'
+import FullLogo from '../../assets/logo/full-logo.png';
+import './navbar.css'
 
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const foundingclientpage = () => {
-        navigate('/become-founding-client');
+    const contactPage = () => {
+        navigate('/contact');
     };
 
     return (
         <nav className="navbar">
             <div className="navbar-logo">
                 <Link to="/">
-                    <span>BH</span>
-                    <div>
-                        <strong>BrightHire</strong>
-                        <span>The bright way tp hire</span>
-                    </div>
+                    <img src={FullLogo} alt="Brighthire logo" className="navbar-logo-image" />
                 </Link>
             </div>
-            <ul className="navbar-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/how-it-works">How It Works</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-            <div className="navbar-cta">
-                <Button onClick={foundingclientpage}>Become a Founding Client</Button>
+            <div className="navbar-right">
+                <ul>
+                    <li><NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}>Home</NavLink></li>
+                    <li><NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>About</NavLink></li>
+                    <li><NavLink to="/how-it-works" className={({isActive}) => isActive ? 'active' : ''}>How It Works</NavLink></li>
+                    <li><NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''}>Contact</NavLink></li>
+                </ul>
+                <div className="navbar-cta">
+                    <Button onClick={contactPage}>Become a Founding Client</Button>
+                </div>
             </div>
         </nav>
     );

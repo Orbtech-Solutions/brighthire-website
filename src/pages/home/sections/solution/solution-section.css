@@ -1,0 +1,55 @@
+/*
+ * Styled selectors in this file:
+ *  - .solution-section
+ *  - .solution-section__inner
+ *  - .solution-section__cards
+ *  - .solution-section__cards .card
+ *  - .solution-section__cards .card .card-icon-wrapper
+ *  - .solution-section__cards .card:hover .card-icon-wrapper
+ */
+
+/* ── Solution Section ────────────────────────────────────────── */
+
+.solution-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 40px;
+  background: #f0f3f8; /* light blue-gray tint, distinct from the white problem section */
+}
+
+.solution-section__inner {
+  max-width: 1230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+/* Cards row */
+.solution-section__cards {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.solution-section__cards .card {
+  flex: 1 1 260px;
+  max-width: 340px;
+}
+
+/* Dark icon wrapper variant — overrides the default light card-icon-wrapper */
+.solution-section__cards .card .card-icon-wrapper {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.solution-section__cards .card:hover .card-icon-wrapper {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}

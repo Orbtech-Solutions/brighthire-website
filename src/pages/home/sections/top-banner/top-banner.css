@@ -1,3 +1,21 @@
+/*
+ * Styled selectors in this file:
+ *  - .top-banner
+ *  - .top-banner .section-inner
+ *  - .top-banner .section-inner .left-container
+ *  - .top-banner .line
+ *  - .top-banner h1 span
+ *  - .top-banner h1
+ *  - .top-banner p
+ *  - .top-banner .buttons-container
+ *  - .top-banner .buttons-container .buttons-row
+ *  - .top-banner .section-inner .right-container
+ *  - .top-banner .section-inner .right-container img
+ *  - .stats-container
+ *  - .stats-container .stat
+ *  - .stats-container .stat p
+ *  - .stats-container .stat h3
+ */
 
 .top-banner {
     background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary) 60%);

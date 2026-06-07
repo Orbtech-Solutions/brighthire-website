@@ -6,6 +6,7 @@ import AboutPage from './pages/about/aboutpage.jsx';
 import HowItWorksPage from './pages/howitworks/howitworkspage.jsx';
 import ContactPage from './pages/contactpage/contactpage.jsx';
 import Becomefoundingclientpage from "./pages/becomefoundingclientpage/becomefoundingclientpage.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function App() {
 //
@@ -22,6 +23,7 @@ function App() {
               <Route path="/become-founding-client" element={<Becomefoundingclientpage />} />
             </Routes>
           </main>
+            <Footer/>
         </div>
       </Router>
   )

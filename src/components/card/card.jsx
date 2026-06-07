@@ -1,40 +1,46 @@
-// Card component (reusable)
-// Renders a simple branded card with optional icon, heading, body and a decorative accent.
-
-import { isValidElement } from 'react'; // checks if a value is a React element (JSX)
-import './card.css'; // component-specific styles
+import { isValidElement } from 'react';
+import './card.css';
 
 /*
  * Props:
- *  - icon        {string|ReactElement}  Image/SVG path or React SVG element
- *  - heading     {string}               Card title
- *  - body        {string}               Card description text
+ *  - icon        {string|ReactElement}  Image/SVG path or React SVG element (icon variant)
+ *  - textIcon    {string}               Text label rendered as a styled accent (e.g. "01")
+ *  - heading     {string}               Card title (omit to hide)
+ *  - body        {string}               Card description (omit to hide)
  *  - className   {string}               Extra class(es) appended to the root element
+ *
+ * Variants:
+ *  - default (icon):   icon prop → renders image or JSX in a boxed wrapper
+ *  - text-icon:        textIcon prop → renders styled text label inline (no box)
  */
-const Card = ({ icon, heading, body, className = '' }) => {
-  // Detect if `icon` is a JSX element (e.g. <MyIcon />). If so, render it directly.
+export default function Card ({ icon, textIcon, heading, body, className = '', color='primary' }) {
   const iconIsElement = isValidElement(icon);
+  const variant = textIcon ? 'text-icon' : 'icon';
 
-  // Root element: `card` plus optional `className` for small overrides.
   return (
-    <div className={`card ${className}`.trim()}>
-      {/* Icon wrapper: accepts a React element or an image path */}
-      <div className="card-icon-wrapper">
-        {iconIsElement ? (
-          icon
-        ) : (
-          <img src={icon} alt="" className="card-icon" aria-hidden="true" />
-        )}
-      </div>
+    <div className={`card card--${variant} color-${color} ${className}`.trim()}>
 
-      {/* Content — title and body; keep markup minimal so typography is controlled globally */}
-      <h3 className="card-heading">{heading}</h3>
-      <p className="card-body">{body}</p>
+      {/* Text-icon variant: large styled label (e.g. "01") */}
+      {textIcon && (
+        <span className="card-text-icon" aria-hidden="true">{textIcon}</span>
+      )}
 
-      {/* Decorative accent bar at the bottom (purely visual) */}
+      {/* Icon variant: boxed image or JSX element */}
+      {!textIcon && (
+        <div className="card-icon-wrapper">
+          {iconIsElement ? (
+            icon
+          ) : (
+            <img src={icon} alt="" className="card-icon" aria-hidden="true" />
+          )}
+        </div>
+      )}
+
+      {/* Heading and body are both optional */}
+      {heading && <h3 className="card-heading">{heading}</h3>}
+      {body && <p className="card-body">{body}</p>}
+
       <span className="card-accent" aria-hidden="true" />
     </div>
   );
 };
-
-export default Card;

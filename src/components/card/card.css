@@ -1,5 +1,16 @@
+/* card.css
+   General card styles and helper classes used by the card component.
+   This file contains the base card container, hover behavior, accent bar,
+   icon wrapper styles, text-icon variant, and shared content resets.
+*/
+
 /* ── Generic Card ────────────────────────────────────────────── */
-  /* Card shell: base layout, padding, border and subtle shadow */
+/* Base card container used for most card components. It defines the
+   layout, spacing, background, border, shadow, and overflow.
+   Hover interaction is opt-in via the helper classes:
+   - .hover-float: moves the card upward and updates the shadow
+   - .hover-accent: reveals the accent underline on hover
+*/
 .card {
   position: relative;
   display: flex;
@@ -19,14 +30,16 @@
     border-color 0.25s ease;
 }
 
-.card:hover {
-  /* Hover state: lift the card and increase shadow for emphasis */
+/* Lift and intensify the card only when .hover-float is applied. */
+.hover-float:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(27, 43, 94, 0.18);
   border-color: rgba(27, 43, 94, 0.16);
 }
 
-/* Accent bar (decorative): slides in from the left on hover */
+/* ── Accent bar ──────────────────────────────────────────────── */
+/* A decorative bottom accent line that animates from left to right on hover.
+   It is only revealed when .hover-accent is added to the card. */
 .card-accent {
   position: absolute;
   bottom: 0;
@@ -40,11 +53,14 @@
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.card:hover .card-accent {
+/* Expand the accent bar only when .hover-accent is applied. */
+.hover-accent:hover .card-accent {
   transform: scaleX(1);
 }
 
-/* Icon wrapper: fixed square to contain an icon or image */
+/* ── Icon variant ────────────────────────────────────────────── */
+/* Wrapper for an icon inside the card. Provides square shape, centered
+   content, soft background, and a border that changes on hover. */
 .card-icon-wrapper {
   display: flex;
   align-items: center;
@@ -57,24 +73,42 @@
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-.card:hover .card-icon-wrapper {
-  /* Icon wrapper hover: subtle tint and border change */
+/* Accent the icon wrapper when the parent card is hovered via .hover-float. */
+.hover-float:hover .card-icon-wrapper {
   background: rgba(97, 106, 255, 0.08);
   border-color: rgba(27, 43, 94, 0.2);
 }
 
+/* Icon image or SVG inside the icon wrapper. Keeps the icon sized and
+   contained without distortion. */
 .card-icon {
-  /* Icon image sizing: keep icons consistent and centered */
   width: 26px;
   height: 26px;
   object-fit: contain;
 }
 
-/* Heading & body — content elements; margins reset so global typography applies */
+/* ── Text-icon variant ───────────────────────────────────────── */
+/* Alternative icon style using text or emoji instead of an image. */
+.card-text-icon {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-secondary); /* brand gold e.g. #e1af4a */
+  letter-spacing: -0.01em;
+}
+
+/* ── Shared content ──────────────────────────────────────────── */
+/* Heading and body reset styles used inside the card content. */
 .card-heading {
   margin: 0;
 }
 
 .card-body {
   margin: 0;
+}
+
+/* ── Color Variants ──────────────────────────────────────────── */
+.color-primary .card-heading {
+  color: var(--color-primary);
 }

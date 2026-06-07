@@ -71,6 +71,7 @@ export default function ProblemSection() {
               icon={problem.icon}
               heading={problem.heading}
               body={problem.body}
+              className="hover-float hover-accent"
             />
           ))}
         </div>

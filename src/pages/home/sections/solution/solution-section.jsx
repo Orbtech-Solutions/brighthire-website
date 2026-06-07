@@ -64,6 +64,7 @@ export default function SolutionSection() {
               icon={solution.icon}
               heading={solution.heading}
               body={solution.body}
+              className="hover-float hover-accent"
             />
           ))}
         </div>

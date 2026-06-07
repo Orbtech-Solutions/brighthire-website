@@ -1,6 +1,6 @@
 import Button from '../../../../components/buttons/button.jsx';
 import HandshakeImage from '../../../../assets/media/images/handshake.jpg';
-import './top-banner.css';
+import './home-top-banner.css';
 
 function Stat({ name, value }) {
   return (
@@ -13,7 +13,7 @@ function Stat({ name, value }) {
 
 export default function TopBanner() {
   return (
-    <section className="top-banner">
+    <section className="top-banner banner-primary">
       <div className="section-inner">
         {/* Left Container */}
         <div className="left-container">

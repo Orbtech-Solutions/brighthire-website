@@ -1,4 +1,4 @@
-import { isValidElement } from 'react';
+import Icon from '../icon/icon';
 import './card.css';
 
 /*
@@ -8,32 +8,21 @@ import './card.css';
  *  - heading     {string}               Card title (omit to hide)
  *  - body        {string}               Card description (omit to hide)
  *  - className   {string}               Extra class(es) appended to the root element
+ *  - color       {string}               Color variant passed to Icon component (default: 'primary')
  *
  * Variants:
  *  - default (icon):   icon prop → renders image or JSX in a boxed wrapper
  *  - text-icon:        textIcon prop → renders styled text label inline (no box)
  */
 export default function Card ({ icon, textIcon, heading, body, className = '', color='primary' }) {
-  const iconIsElement = isValidElement(icon);
   const variant = textIcon ? 'text-icon' : 'icon';
 
   return (
     <div className={`card card--${variant} color-${color} ${className}`.trim()}>
 
-      {/* Text-icon variant: large styled label (e.g. "01") */}
-      {textIcon && (
-        <span className="card-text-icon" aria-hidden="true">{textIcon}</span>
-      )}
-
-      {/* Icon variant: boxed image or JSX element */}
-      {!textIcon && (
-        <div className="card-icon-wrapper">
-          {iconIsElement ? (
-            icon
-          ) : (
-            <img src={icon} alt="" className="card-icon" aria-hidden="true" />
-          )}
-        </div>
+      {/* Icon component handles both image icons and text icons */}
+      {(icon || textIcon) && (
+        <Icon icon={icon} textIcon={textIcon} color={color} />
       )}
 
       {/* Heading and body are both optional */}

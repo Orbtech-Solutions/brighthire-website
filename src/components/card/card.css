@@ -1,7 +1,7 @@
 /* card.css
    General card styles and helper classes used by the card component.
-   This file contains the base card container, hover behavior, accent bar,
-   icon wrapper styles, text-icon variant, and shared content resets.
+   This file contains the base card container, hover behavior, and accent bar.
+   Icon styling has been moved to icon.css.
 */
 
 /* ── Generic Card ────────────────────────────────────────────── */
@@ -58,45 +58,7 @@
   transform: scaleX(1);
 }
 
-/* ── Icon variant ────────────────────────────────────────────── */
-/* Wrapper for an icon inside the card. Provides square shape, centered
-   content, soft background, and a border that changes on hover. */
-.card-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background: rgba(247, 249, 252, 1);
-  border: 1.5px solid rgba(27, 43, 94, 0.08);
-  border-radius: 14px;
-  transition: background 0.25s ease, border-color 0.25s ease;
-}
 
-/* Accent the icon wrapper when the parent card is hovered via .hover-float. */
-.hover-float:hover .card-icon-wrapper {
-  background: rgba(97, 106, 255, 0.08);
-  border-color: rgba(27, 43, 94, 0.2);
-}
-
-/* Icon image or SVG inside the icon wrapper. Keeps the icon sized and
-   contained without distortion. */
-.card-icon {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-}
-
-/* ── Text-icon variant ───────────────────────────────────────── */
-/* Alternative icon style using text or emoji instead of an image. */
-.card-text-icon {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-secondary); /* brand gold e.g. #e1af4a */
-  letter-spacing: -0.01em;
-}
 
 /* ── Shared content ──────────────────────────────────────────── */
 /* Heading and body reset styles used inside the card content. */

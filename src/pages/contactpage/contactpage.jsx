@@ -1,15 +1,13 @@
+import TopBanner from "./sections/top-banner/contact-top-banner";
+import ContactDetails from "./sections/contact-details/contact-details";
+
+
 const ContactPage = () => {
     return (
-        <div className="page contact-page">
-            <section className="top-section">
-                <p>Hellooooo</p>
-            </section>
-            <section className="contact-form-section">
-                <h2>Contact details</h2>
-                <form className="contact-form">
-                </form>
-            </section>
-        </div>
+        <>
+            <TopBanner />
+            <ContactDetails />
+        </>
     );
 };
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/single-logo.png";
 import "./footer.css";
-import { Linkedin, Facebook, Instagram, MessageCircle , Mail } from "lucide-react";
+import { Mail, MessageCircle, ExternalLink, Globe, Camera } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -22,9 +22,9 @@ const Footer = () => {
                         work-ready graduates while investing 25% of every retainer into local skills development.
                     </p>
                     <div className="social-links">
-                        <a href="#" aria-label="LinkedIn"><Linkedin size={16} /></a>
-                        <a href="#" aria-label="Facebook"><Facebook size={16} /></a>
-                        <a href="#" aria-label="Instagram"><Instagram size={16} /></a>
+                        <a href="#" aria-label="LinkedIn"><ExternalLink size={16} /></a>
+                        <a href="#" aria-label="Facebook"><Globe size={16} /></a>
+                        <a href="#" aria-label="Instagram"><Camera size={16} /></a>
                         <a href="#" aria-label="Message"><MessageCircle size={16} /></a>
                     </div>
                 </div>

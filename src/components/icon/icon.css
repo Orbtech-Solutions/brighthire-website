@@ -1,0 +1,39 @@
+/* ── Icon Text variant ──────────────────────────────────────── */
+/* Styled text or emoji label (e.g. "01") */
+.icon-text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-secondary); /* brand gold e.g. #e1af4a */
+  letter-spacing: -0.01em;
+}
+
+/* ── Icon Wrapper ────────────────────────────────────────────── */
+/* Container for an icon inside a card. Provides square shape, centered
+   content, soft background, and a border that changes on hover. */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(247, 249, 252, 1);
+  border: 1.5px solid rgba(27, 43, 94, 0.08);
+  border-radius: 14px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+/* Accent the icon wrapper when the parent card is hovered via .hover-float. */
+.hover-float:hover .icon-wrapper {
+  background: rgba(97, 106, 255, 0.08);
+  border-color: rgba(27, 43, 94, 0.2);
+}
+
+/* Icon image or SVG inside the wrapper. Keeps the icon sized and
+   contained without distortion. */
+.icon-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}

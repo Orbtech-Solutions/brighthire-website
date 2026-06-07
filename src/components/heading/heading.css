@@ -1,12 +1,14 @@
 /* ── Reusable Section Typography ─────────────────────────────── */
 
+
 /* Small label above section headings (e.g. "THE PROBLEM") */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.small-text {
+
+.container .small-text {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -15,9 +17,13 @@
   margin: 0;
   margin-bottom: 5px;
 }
+.container.small-text-white .small-text {
+  color: white;
+}
+
 
 /* Main section heading (e.g. "Hiring shouldn't feel like a gamble.") */
-.heading {
+.container .heading {
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.15;
@@ -25,12 +31,22 @@
   margin: 0;
   margin-bottom: 25px;
 }
+.container.heading-white .heading {
+  color: white;
+}
 
 /* Section sub-paragraph / descriptor beneath the heading */
-.subtext {
+.container .subtext {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-dark);
   margin: 0;
   max-width: 560px;
 }
+
+.container.subtext-white .subtext {
+  color: white;
+}
+
+
+

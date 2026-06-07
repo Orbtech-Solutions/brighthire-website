@@ -1,0 +1,91 @@
+/* Layout */
+.section-inner {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contact details */
+.contact-details {
+  max-width: 420px;
+  padding: 32px 24px;
+}
+
+.contact-details__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 8px;
+}
+
+.contact-details__subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+/* Contact item rows */
+.contact-details__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.contact-details__list > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-details__list > div p {
+  margin: 0;
+}
+
+/* First <p> = label (e.g. "Sales Enquiries") */
+.contact-details__list > div p:first-of-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+/* Second <p> = value (e.g. "sales@brighthire.net") */
+.contact-details__list > div p:last-of-type {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* Wrap the two <p> tags so they stack vertically */
+.contact-details__list > div p:first-of-type,
+.contact-details__list > div p:last-of-type {
+  display: block;
+}
+
+/* Founding clients callout */
+.contact-details__founding {
+  background: #fdf6e3;
+  border: 1.5px solid #e8d9a8;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.contact-details__founding-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a07828;
+  margin: 0 0 8px;
+}
+
+.contact-details__founding-body {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}

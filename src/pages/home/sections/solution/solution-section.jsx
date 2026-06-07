@@ -51,7 +51,7 @@ const SOLUTIONS = [
 export default function SolutionSection() {
   return (
     <section className="solution-section">
-      <div className="solution-section__inner">
+      <div className="section-inner">
 
         <Heading 
           smallText="The Solution"

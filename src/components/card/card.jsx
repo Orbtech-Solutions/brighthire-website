@@ -14,7 +14,7 @@ import './card.css';
  *  - default (icon):   icon prop → renders image or JSX in a boxed wrapper
  *  - text-icon:        textIcon prop → renders styled text label inline (no box)
  */
-export default function Card ({ icon, textIcon, heading, body, className = '', color='primary' }) {
+export default function Card ({ children, icon, textIcon, heading, body, className = '', color='primary' }) {
   const variant = textIcon ? 'text-icon' : 'icon';
 
   return (
@@ -29,7 +29,10 @@ export default function Card ({ icon, textIcon, heading, body, className = '', c
       {heading && <h3 className="card-heading">{heading}</h3>}
       {body && <p className="card-body">{body}</p>}
 
+      { children }
+      
       <span className="card-accent" aria-hidden="true" />
     </div>
   );
 };
+

@@ -24,10 +24,41 @@
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
+.icon-wrapper.color-primary {
+  background: rgba(97, 106, 255, 0.08);
+  border-color: rgba(97, 106, 255, 0.24);
+}
+
+.icon-wrapper.color-secondary {
+  background: rgba(225, 175, 74, 0.08);
+  border-color: rgba(225, 175, 74, 0.24);
+}
+
+.icon-wrapper.color-white {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.icon-borderless {
+  border: none;
+}
+
 /* Accent the icon wrapper when the parent card is hovered via .hover-float. */
 .hover-float:hover .icon-wrapper {
   background: rgba(97, 106, 255, 0.08);
   border-color: rgba(27, 43, 94, 0.2);
+}
+
+.icon-text.color-primary {
+  color: var(--color-primary);
+}
+
+.icon-text.color-secondary {
+  color: var(--color-secondary);
+}
+
+.icon-text.color-white {
+  color: white;
 }
 
 /* Icon image or SVG inside the wrapper. Keeps the icon sized and

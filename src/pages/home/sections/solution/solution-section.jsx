@@ -1,5 +1,7 @@
 import Card from '../../../../components/card/card.jsx';
+import Heading from '../../../../components/heading/heading.jsx';
 import './solution-section.css';
+
 
 // Icons use var(--color-secondary) (yellow/gold) to contrast against the dark navy wrapper
 
@@ -50,11 +52,11 @@ export default function SolutionSection() {
   return (
     <section className="solution-section">
       <div className="solution-section__inner">
-        {/* Section label */}
-        <p className="section-small-text">The Solution</p>
 
-        {/* Section heading */}
-        <h2 className="section-heading">Recruitment, rebuilt around outcomes.</h2>
+        <Heading 
+          smallText="The Solution"
+          heading="Recruitment, rebuilt around outcomes."
+        />
 
         {/* Cards row */}
         <div className="solution-section__cards">

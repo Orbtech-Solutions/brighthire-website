@@ -1,5 +1,6 @@
 import Card from '../../../../components/card/card.jsx';
 import './problem-section.css';
+import Heading from '../../../../components/heading/heading.jsx';
 
 // Lucide-style inline SVG icons — no extra dependencies needed.
 // Swap these out for your icon library / asset paths if preferred.
@@ -51,17 +52,12 @@ export default function ProblemSection() {
   return (
     <section className="problem-section">
       <div className="problem-section__inner">
-        {/* Section label */}
-        <p className="section-small-text">The Problem</p>
-
-        {/* Section heading */}
-        <h2 className="section-heading">Hiring shouldn't feel like a gamble.</h2>
-
-        {/* Section descriptor */}
-        <p className="section-subtext">
-          South African businesses are burning resources on broken recruitment.
-          We've heard the same three complaints over and over.
-        </p>
+        <Heading 
+          smallText="The Problem"
+          heading="Hiring shouldn't feel like a gamble."
+          subText="South African businesses are burning resources on broken recruitment.
+          We've heard the same three complaints over and over."
+        />
 
         {/* Cards row */}
         <div className="problem-section__cards">

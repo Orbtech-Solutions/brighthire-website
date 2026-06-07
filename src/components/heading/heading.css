@@ -1,0 +1,36 @@
+/* ── Reusable Section Typography ─────────────────────────────── */
+
+/* Small label above section headings (e.g. "THE PROBLEM") */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.small-text {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+/* Main section heading (e.g. "Hiring shouldn't feel like a gamble.") */
+.heading {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+/* Section sub-paragraph / descriptor beneath the heading */
+.subtext {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin: 0;
+  max-width: 560px;
+}

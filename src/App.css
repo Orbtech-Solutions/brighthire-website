@@ -1,0 +1,9 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Makes the app fill the full screen height */
+}
+
+main {
+    flex: 1;  /* Pushes the footer to the bottom */
+}

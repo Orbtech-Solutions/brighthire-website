@@ -22,6 +22,10 @@ const IMPACT_STATS = [
     },
 ];
 
+// Color variables
+const cardBackgound = "color-mix(in oklab, var(--color-white) 5%, transparent)"
+
+
 export default function ImpactSection() {
     return (
         <section className="impact-section">
@@ -38,10 +42,13 @@ export default function ImpactSection() {
                         <Card
                             key={stat.heading}
                             icon={stat.icon}
-                            heading={stat.heading}
-                            body={stat.body}
-                            className="hover-float impact-card"
-                        />
+                            className="card hover-float impact-card"
+                            bgColor={cardBackgound}>
+                                <p>{stat.heading}</p>
+                                <h3>{stat.body}</h3>
+
+                        </Card>
+                            
                     ))}
                 </div>
 

@@ -10,8 +10,11 @@
 }
 
 /* Contact details */
-.contact-details-section .contact-detail-list {
-  
+.contact-details-section .contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 0;
 }
 .contact-details-section .contact-detail {
   display: flex;
@@ -24,20 +27,40 @@
   display: flex;
   flex-direction: column;
 }
-.contact-details-section .text h3 {
+
+.contact-details-section h3 {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
+
   margin: 0;
 }
-.contact-details-section .text p {
+.contact-details-section p {
   font-size: 14px;
   font-weight: 500;
+  margin: 0; 
+}
+
+.contact-details-section .text h3 {
+  color: var(--text-dark);
+}
+.contact-details-section .text p {
   color: var(--color-primary);
-  margin: 0;
 }
 
 
+.contact-details-section .card h3 {
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.contact-details-section .card p {
+  color: var(--text-dark);
+}
+
+.contact-details-section .card p span {
+  font-weight: 700;
+}
 
 .contact-details-section .form {
   width: 80%;

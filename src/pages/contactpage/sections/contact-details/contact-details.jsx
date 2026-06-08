@@ -9,7 +9,7 @@ import "./contact-details.css";
 export function ContactDetail({icon, heading, detail}) {
     return (
         <div className="contact-detail">
-            <Icon icon={icon} borderless={true} />
+            <Icon icon={icon} borderless={true} size={40}/>
             <div className='text'>
                 <h3>{heading}</h3>
                 <p>{detail}</p>
@@ -19,6 +19,8 @@ export function ContactDetail({icon, heading, detail}) {
 }
 
 export default function ContactDetails() {
+    const cardBackgroundColor = "color-mix(in oklab, var(--color-secondary-soft) 40%, transparent)";
+
     return (
         <section className='contact-details-section'>
             <div className="section-inner">
@@ -36,16 +38,24 @@ export default function ContactDetails() {
                             detail = "sales@brighthire.net"
                         />
                         <ContactDetail 
-                            icon = {<Mail size={20} color="var(--color-primary)"/>}
-                            heading = "Sales Enquiries"
-                            detail = "sales@brighthire.net"
+                            icon = {<Phone size={20} color="var(--color-primary)"/>}
+                            heading = "WhatsApp/Call us"
+                            detail = "+27 660 067 920"
                         />
                         <ContactDetail 
-                            icon = {<Mail size={20} color="var(--color-primary)"/>}
-                            heading = "Sales Enquiries"
-                            detail = "sales@brighthire.net"
+                            icon = {<MapPin size={20} color="var(--color-primary)"/>}
+                            heading = "Location"
+                            detail = "Durbanville, South Africa"
                         />
                     </div>
+
+                    {/* Card */}
+                    <Card className="card"  bgColor={cardBackgroundColor}>
+                        <h3>Founding clients - Paarl</h3>
+                        <p>
+                            We're selecting our first <span>10 founding clients</span>. Lock in your rate permanently before our official launch.
+                        </p>
+                    </Card>
                 </div>
 
                 <Form

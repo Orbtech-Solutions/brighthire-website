@@ -32,18 +32,20 @@ export default function Reasons() {
     ]
     return(
         <section className="reasons-section">
-                <div className="reasons-section__left">
+                <div className='section-inner'>
+                    <div className="reasons-section__left">
                     <p>What makes us different</p>
                     <h1>Eight reasons businesses choose BrightHire.</h1>
                     <h2>We aren't trying to be every recruitment agency. 
                         We're trying to be the one that actually keeps its promises — 
                         to you, to our candidates, and to the communities we serve.
                     </h2>
-                </div>
-                <div className="reasons-section__right">
-                    {reasons.map((reason) => (
-                        <Card textIcon={<CircleCheck color="#E5AF3C"/>} body={reason.description} className="reasons-section__right-card"/>
-                    ))}
+                    </div>
+                    <div className="reasons-section__right">
+                        {reasons.map((reason) => (
+                            <Card textIcon={<CircleCheck color="#E5AF3C"/>} body={reason.description} className="reasons-section__right-card"/>
+                        ))}
+                    </div>
                 </div>
         </section>
     )

@@ -20,10 +20,6 @@ export default function Card ({ children, icon, textIcon, heading, body, classNa
   return (
     <div style={{backgroundColor: bgColor}} className={`card card--${variant} color-${color} ${className}`.trim()}>
 
-      { children }
-
-
-      {/*** Old structure - still ***/}
       {/* Icon component handles both image icons and text icons */}
       {(icon || textIcon) && (
         <Icon icon={icon} textIcon={textIcon} color={color} />
@@ -33,7 +29,9 @@ export default function Card ({ children, icon, textIcon, heading, body, classNa
       {heading && <h3 className="card-heading">{heading}</h3>}
       {body && <p className="card-body">{body}</p>}
 
-      
+
+      { children }
+
       
       <span className="card-accent" aria-hidden="true" />
     </div>

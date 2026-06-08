@@ -67,3 +67,19 @@
     line-height: 1.6;
     margin: 0;
 }
+
+
+.impact-section .card p {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0;
+}
+.impact-section .card h3 {
+    font-size: 400;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin: 0;
+}

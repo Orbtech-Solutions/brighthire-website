@@ -1,0 +1,100 @@
+
+/* TOP SECTION */
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: oklch(24% .08 262);
+}
+
+.top-section p {
+    color: #E5AF3C;
+}
+
+.top-section h1 {
+    color: white;
+    font-style: normal;
+    font-size: 70px;
+    width: 60%;
+    font-weight: 600
+}
+
+.top-section h3 {
+    color: white;
+    font-style: normal;
+    font-weight: 400
+}
+
+/* STEPS SECTION WITH CARDS */
+
+.list-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 1.5rem;
+    
+    text-align: left;         
+    align-items: center;  
+}
+
+.cards-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards-section__number-circle {
+    width: 55px;
+    height: 55px;
+    background-color: oklch(32% .09 260);
+    border-radius: 50%;
+    color: #E5AF3C;
+    font-family: Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-section__cards {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 60vw;
+    padding: 40px
+}
+
+/* REASONS SECTION */
+
+.reasons-section {
+    display: flex;
+    flex-direction: row;
+    background-color: oklch(95.676% 0.00009 271.152);
+}
+/* LEFT SIDE */
+.reasons-section__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 6vw;
+}
+.reasons-section__left p {
+   color:#E5AF3C;
+}
+.reasons-section__left h1 {
+   font-size: 45px
+}
+.reasons-section__left h2 {
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 200;
+
+}
+/* RIGHT SIDE */
+.reasons-section__right {
+    display: flex;
+    flex-direction: column;
+
+}

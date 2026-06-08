@@ -29,7 +29,7 @@
 import { isValidElement } from 'react';
 import './icon.css';
 
-export default function Icon({ icon, textIcon, color = 'primary', borderless = false }) {
+export default function Icon({ className, icon, textIcon, color = 'primary', borderless = false }) {
   const iconIsElement = isValidElement(icon);
 
   // Text-icon variant: large styled label (e.g. "01")
@@ -41,7 +41,7 @@ export default function Icon({ icon, textIcon, color = 'primary', borderless = f
 
   // Image icon variant: boxed image or JSX element
   return (
-    <div className={`icon-wrapper color-${color} ${borderless ? 'icon-borderless' : ''}`.trim()}>
+    <div className={`icon-wrapper ${className} color-${color} ${borderless ? 'icon-borderless' : ''}`.trim()}>
       {iconIsElement ? (
         icon
       ) : (

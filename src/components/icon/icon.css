@@ -28,6 +28,10 @@
   background: rgba(97, 106, 255, 0.08);
   border-color: rgba(97, 106, 255, 0.24);
 }
+.icon-wrapper.background-primary {
+  background: var(--color-primary);
+  border: none;
+}
 
 .icon-wrapper.color-secondary {
   background: rgba(225, 175, 74, 0.08);
@@ -43,11 +47,7 @@
   border: none;
 }
 
-/* Accent the icon wrapper when the parent card is hovered via .hover-float. */
-.hover-float:hover .icon-wrapper {
-  background: rgba(97, 106, 255, 0.08);
-  border-color: rgba(27, 43, 94, 0.2);
-}
+
 
 .icon-text.color-primary {
   color: var(--color-primary);

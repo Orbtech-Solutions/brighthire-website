@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Button from '../buttons/button';
 import './form.css';

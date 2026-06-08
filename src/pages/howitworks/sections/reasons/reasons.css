@@ -1,0 +1,33 @@
+/* REASONS SECTION */
+
+.reasons-section {
+    display: flex;
+    flex-direction: row;
+    background-color: oklch(95.676% 0.00009 271.152);
+}
+/* LEFT SIDE */
+.reasons-section__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 6vw;
+}
+.reasons-section__left p {
+   color:#E5AF3C;
+}
+.reasons-section__left h1 {
+   font-size: 45px
+}
+.reasons-section__left h2 {
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 200;
+
+}
+/* RIGHT SIDE */
+.reasons-section__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(4, auto);   
+    gap: 16px;
+}

@@ -18,6 +18,8 @@
   --color-primary-deep: oklch(24% .08 262);;
 
   --color-secondary: oklch(0.78 0.13 82);
+  --color-secondary-soft: oklch(92% .06 84);
+  
   --text-dark: oklch(0.48 0.03 258);
   --text-light: oklch(76.676% 0.00009 271.152);
 

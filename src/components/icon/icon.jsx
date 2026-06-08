@@ -29,8 +29,9 @@
 import { isValidElement } from 'react';
 import './icon.css';
 
-export default function Icon({ className, icon, textIcon, color = 'primary', borderless = false }) {
+export default function Icon({ className, icon, textIcon, color = 'primary', borderless = false, width, height, size }) {
   const iconIsElement = isValidElement(icon);
+  const wrapperStyle = size ? { width: `${size}px`, height: `${size}px` } : { ...(width && { width: `${width}px` }), ...(height && { height: `${height}px` }) };
 
   // Text-icon variant: large styled label (e.g. "01")
   if (textIcon) {
@@ -41,7 +42,7 @@ export default function Icon({ className, icon, textIcon, color = 'primary', bor
 
   // Image icon variant: boxed image or JSX element
   return (
-    <div className={`icon-wrapper ${className} color-${color} ${borderless ? 'icon-borderless' : ''}`.trim()}>
+    <div className={`icon-wrapper ${className} color-${color} ${borderless ? 'icon-borderless' : ''}`.trim()} style={wrapperStyle}>
       {iconIsElement ? (
         icon
       ) : (

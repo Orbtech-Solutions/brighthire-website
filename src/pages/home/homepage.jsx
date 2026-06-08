@@ -1,6 +1,7 @@
 import TopBanner from './sections/top-banner/home-top-banner.jsx';
 import ProblemSection from './sections/problem/problem-section.jsx';
 import SolutionSection from './sections/solution/solution-section.jsx';
+import ImpactSection from './sections/our-impact/our-impact.jsx';
 import './home.css';
 
 const HomePage = () => {
@@ -8,7 +9,8 @@ const HomePage = () => {
     <>
         <TopBanner />
         <ProblemSection />  
-        <SolutionSection />      
+        <SolutionSection />
+        <ImpactSection />
     </>
   );
 };

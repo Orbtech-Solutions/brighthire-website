@@ -3,12 +3,13 @@
 .list-section {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    gap: 1.5rem;
-    
-    text-align: left;         
-    align-items: center;  
+    align-items: center;
+    max-width: 750px;          
+    margin: 0 auto;
+    width: 100%;
+    gap: 24px; 
 }
+
 
 .cards-section {
     display: flex;
@@ -25,14 +26,13 @@
     font-weight: bold;
     font-size: 19px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .cards-section__cards {
     display: flex;
     flex-direction: column;
+    align-items: start;
     text-align: left;
     width: 60vw;
-    padding: 40px
 }

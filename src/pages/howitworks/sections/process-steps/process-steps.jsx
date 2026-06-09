@@ -32,8 +32,8 @@ export default function ProcesSteps() {
     ]
 
     return(
-        <section className="list-section">
-            <div className="section-inner">
+        <section>
+            <div className="section-inner list-section">
                 {steps.map((step) => (
                     <div className="cards-section">
                         <div class="cards-section__number-circle">{step.Icon}</div>

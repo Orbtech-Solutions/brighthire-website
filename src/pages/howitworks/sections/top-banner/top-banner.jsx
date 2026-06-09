@@ -8,7 +8,7 @@ export default function TopBanner() {
                 smallText="How it works"
                 heading="A structured process, built for the long term." 
                 subText="From brief to placement to monthly support — here's exactly what working with BrightHire looks like."
-                className="heading-white subtext-white"
+                className="heading-white subtext-white section-paragraph"
             />
         </section>
     )

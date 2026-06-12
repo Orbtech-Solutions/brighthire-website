@@ -27,3 +27,32 @@
     grid-template-columns: repeat(2, 1fr); 
     gap: 16px;             
 }
+
+
+
+@media (max-width: 1024px) {
+    .reasons-section .section-inner {
+        flex-direction: column; 
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .reasons-section__left {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 640px) {
+    .reasons-section {
+        padding: 40px 16px;
+    }
+
+    .reasons-section .section-inner {
+        gap: 32px;
+    }
+
+    .reasons-section__right {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

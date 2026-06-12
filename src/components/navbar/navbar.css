@@ -49,7 +49,38 @@
     width: 100%;                                 
 }
 
-/* Keep the pseudo-element visible when the route is active */
 .navbar-right ul a.active::after {
     width: 100%;
+}
+
+@media (max-width: 1050px) {
+    .navbar-logo-image {
+        width:25vw;
+        height: auto;
+    }
+    .navbar {
+        padding: 10px 10px;
+    }
+    .navbar-right ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    .navbar-right {
+        gap: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: space-between
+    }
+    
 }

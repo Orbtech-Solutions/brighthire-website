@@ -3,6 +3,10 @@ import Card from "../../../../components/card/card";
 import "./howitworks.css";
 import { Link } from 'react-router-dom';
 
+
+//Nie die page nie, die SECTION Corne... ~ Kobus 2026
+
+
 const steps = [
     {
         key: 1,
@@ -31,7 +35,6 @@ const steps = [
 ]
 
 export default function HowItWorks() {
-    //Nie die page nie, die SECTION Corne... ~ Kobus 2026
     return(
         <section>
             <div className="section-inner section-whole">

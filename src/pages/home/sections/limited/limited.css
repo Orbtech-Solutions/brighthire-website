@@ -1,0 +1,25 @@
+.section-limited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-limited__card {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 65%;
+    padding: 50px;
+    gap: 20px;
+    border-radius: 32px;
+}
+.section-limited__card h1 {
+    color:  white !important
+}
+
+
+/* If it works dont touch it... */
+.section-limited__card .card-heading-area + p,
+.section-limited__card [class*="heading"] + p {
+    color: #ffffff;
+}

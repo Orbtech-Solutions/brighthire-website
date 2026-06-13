@@ -1,7 +1,7 @@
-.section-whole {
+.how-it-works-section .section-inner {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 50px;
 }
 
 .section-right {
@@ -9,10 +9,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     place-items: center;
-}
-
-.section-right__card {
-    padding-right: 6vw
 }
 
 .section-right .icon-text {
@@ -25,6 +21,12 @@
     flex-direction: column;
     gap: 40px
 }
+
+.how-it-works-section .card {
+    height: 180px;
+    justify-content: flex-start;
+}
+
 
 @media (max-width: 1024px) {
     .section-right {
@@ -40,7 +42,7 @@
     .section-right {
         grid-template-columns: 1fr;
     }
-    .section-whole {
+    .how-it-works-section .section-inner {
         flex-direction: column;
     }
 }

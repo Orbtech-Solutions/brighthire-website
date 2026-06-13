@@ -36,8 +36,8 @@ const steps = [
 
 export default function HowItWorks() {
     return(
-        <section>
-            <div className="section-inner section-whole">
+        <section className="how-it-works-section">
+            <div className="section-inner">
                 <div className="section-left">
                     <Heading smallText="How it works" heading="Four steps. One long-term partnership." subText="A simple, structured process designed to make hiring feel calm — and to keep your business and our community thriving long after day one."/>
                     <Link to="/how-it-works">See the full process →</Link>
@@ -49,7 +49,7 @@ export default function HowItWorks() {
                             textIcon={step.number}
                             heading={step.heading}
                             body={step.body}
-                            className="section-right__card hover-float hover-accent"
+                            className="hover-float hover-accent"
                         />
                     ))}
                 </div>

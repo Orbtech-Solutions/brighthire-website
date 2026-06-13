@@ -37,7 +37,8 @@
   /* Animations */
   --small-transition: 200ms;
 
-
+  /* Sizing and spacing */
+  --max-width: 1200px;
 
 
 

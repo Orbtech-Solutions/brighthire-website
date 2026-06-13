@@ -4,8 +4,8 @@ import "./ourstory.css"
 
 export default function OurStory() {
     return(
-        <section>
-            <div className="ourstory-section section-inner">
+        <section className="our-story-section">
+            <div className="section-inner">
                 <Heading heading="Started in Paarl. Built for South Africa."
                          smallText="Our story"
                 />

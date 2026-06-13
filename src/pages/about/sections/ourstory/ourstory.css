@@ -1,3 +1,7 @@
+.our-story-section {
+    background-color: var(--color-light-gray);
+}
+
 .ourstory-body {
     text-align: center;
 }

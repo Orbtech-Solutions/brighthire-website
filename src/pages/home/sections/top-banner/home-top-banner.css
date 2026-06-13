@@ -18,15 +18,12 @@
  */
 
 .top-banner {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary) 60%);
-    border: 2px solid black;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 80px 0 100px;
 }
 .top-banner .section-inner {
-    max-width: 1230px;
     display: flex;
     flex-direction: row;
     gap: 75px;
@@ -38,6 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
 }
 
 /* Horizontal rule in banner uses the text-light color and fills width */
@@ -111,4 +109,49 @@
     font-size: 24px;
     margin: 0;
     line-height: normal;
+}
+
+
+@media (max-width: 1024px) {
+    .top-banner .section-inner {
+        flex-direction: column-reverse; 
+        gap: 40px; 
+        padding: 0 20px; 
+    }
+
+    .top-banner .section-inner .left-container,
+    .top-banner .section-inner .right-container {
+        width: 100%;
+    }
+
+    .top-banner .section-inner .right-container img {
+        min-height: 300px; 
+        height: auto;
+    }
+
+    .top-banner .buttons-container,
+    .top-banner .buttons-container .buttons-row {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .stats-container .stat {
+        flex: 1 1 calc(50% - 20px); 
+        text-align: center;
+    }
+}
+@media (max-width: 488px) {
+    .top-banner .buttons-container .buttons-row {
+        flex-direction: column; 
+    }
+    
+    .stats-container .stat {
+        flex: 1 1 100%; 
+    }
 }

@@ -1,0 +1,18 @@
+import Heading from "../../../../components/heading/heading"
+import Button from "../../../../components/buttons/button"
+import "./readytohire.css"
+
+
+
+export default function ReadyToHire() {
+    return(
+        <section>
+            <div className="section-inner section-get-hires">
+                <Heading heading="Ready to hire the bright way?" 
+                         subText="Lock in your founding client rate and start investing in your community today."
+                />
+                <Button variant="primary">Get in touch</Button>
+            </div>
+        </section>
+    )
+}

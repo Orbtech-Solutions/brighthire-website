@@ -14,10 +14,12 @@
 
 
   /* Colors */
-  --color-primary: oklch(0.32 0.09 260);
-  /* Slightly richer darker blue for banner gradient */
-  --color-primary-dark: oklch(25.363% 0.10379 273.322);
+  --color-primary: oklch(32% .09 260);
+  --color-primary-deep: oklch(24% .08 262);;
+
   --color-secondary: oklch(0.78 0.13 82);
+  --color-secondary-soft: oklch(92% .06 84);
+  
   --text-dark: oklch(0.48 0.03 258);
   --text-light: oklch(76.676% 0.00009 271.152);
 
@@ -27,7 +29,7 @@
 
   /* Font */
   font-size: 18px;
-  color: var(text-dark);
+  color: var(--text-dark);
 
   /* Roudning */
   --rounded-full: 28px;

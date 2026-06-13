@@ -13,28 +13,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 96px 40px;
   background: #ffffff;
 }
 
-.problem-section__inner {
-  max-width: 1230px;
-  width: 100%;
+.problem-section .section-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  text-align: center;
 }
 
 /* Nudge the subtext to be centred and capped in width */
-.problem-section__inner .section-subtext {
+.problem-section .section-inner .section-subtext {
   margin: 0 auto;
   margin-top: 4px;
 }
 
 /* Row of cards */
-.problem-section__cards {
+.problem-section .problem-section__cards {
   display: flex;
   flex-direction: row;
   gap: 28px;
@@ -44,7 +40,13 @@
 }
 
 /* Let cards grow to fill the row evenly on wider screens */
-.problem-section__cards .card {
+.problem-section .problem-section__cards .card {
   flex: 1 1 260px;
   max-width: 340px;
+}
+
+@media (max-width: 768px) {
+ .problem-section {
+    margin: 0 20px
+  }
 }

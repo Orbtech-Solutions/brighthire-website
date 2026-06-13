@@ -1,0 +1,38 @@
+/* STEPS SECTION WITH CARDS */
+
+.list-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;          
+    margin: 0 auto;
+    width: 100%;
+    gap: 24px; 
+}
+
+
+.cards-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards-section__number-circle {
+    width: 55px;
+    height: 55px;
+    background-color: oklch(32% .09 260);
+    border-radius: 50%;
+    color: #E5AF3C;
+    font-family: Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    
+}
+
+.cards-section__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    width: 60vw;
+}

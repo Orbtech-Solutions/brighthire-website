@@ -14,13 +14,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 96px 40px;
   background: #f0f3f8; /* light blue-gray tint, distinct from the white problem section */
 }
 
-.solution-section__inner {
-  max-width: 1230px;
-  width: 100%;
+.sectioninner {
   display: flex;
   flex-direction: column;
   align-items: center;

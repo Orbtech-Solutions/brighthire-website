@@ -14,11 +14,13 @@ import './card.css';
  *  - default (icon):   icon prop → renders image or JSX in a boxed wrapper
  *  - text-icon:        textIcon prop → renders styled text label inline (no box)
  */
-export default function Card ({ children, icon, textIcon, heading, body, className = '', color='primary', bgColor }) {
+export default function Card ({ children, icon, textIcon, heading, body, className = '', color='primary', bgColor}) {
   const variant = textIcon ? 'text-icon' : 'icon';
 
   return (
-    <div style={{backgroundColor: bgColor}} className={`card card--${variant} color-${color} ${className}`.trim()}>
+    <div 
+      style={{backgroundColor: bgColor}} 
+      className={`card card--${variant} color-${color} ${className} ${className} `.trim()}>
 
       {/* Icon component handles both image icons and text icons */}
       {(icon || textIcon) && (

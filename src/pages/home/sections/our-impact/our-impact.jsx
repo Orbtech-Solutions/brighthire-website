@@ -42,7 +42,7 @@ export default function ImpactSection() {
                         <Card
                             key={stat.heading}
                             icon={stat.icon}
-                            className="card hover-float impact-card"
+                            className="hover-float"
                             bgColor={cardBackgound}>
                                 <p>{stat.heading}</p>
                                 <h3>{stat.body}</h3>

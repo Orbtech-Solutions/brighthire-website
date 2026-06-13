@@ -1,9 +1,9 @@
 import { CircleCheck } from 'lucide-react';
 import Card from "../../../../components/card/card.jsx";
 import Heading from "../../../../components/heading/heading.jsx";
-import "./reasons.css";
+import "./what-makes-us-diffirent.css";
 
-export default function Reasons() {
+export default function WhatMakesUsDiffirent() {
     const reasons = [
         { description: "Exclusive access to Work 4 A Living trained graduates" },
         { description: "Placement fees never exceeding 8% of annual salary" },

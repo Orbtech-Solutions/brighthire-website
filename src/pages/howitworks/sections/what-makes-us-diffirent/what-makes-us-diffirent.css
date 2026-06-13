@@ -1,10 +1,10 @@
 /* REASONS SECTION */
-.reasons-section {
+.what-makes-us-diffirent-section {
     background: #f0f3f8;
     padding: 80px 24px; 
 }
 
-.reasons-section .section-inner {
+.what-makes-us-diffirent-section .section-inner {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
@@ -14,14 +14,14 @@
 }
 
 /* LEFT SIDE (Heading) */
-.reasons-section__left {
+.what-makes-us-diffirent-section__left {
     flex: 1;
     max-width: 420px;       
     top: 40px;
 }
 
 /* RIGHT SIDE  */
-.reasons-section__right {
+.what-makes-us-diffirent-section__right {
     flex: 1.5;              
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -31,27 +31,27 @@
 
 
 @media (max-width: 1024px) {
-    .reasons-section .section-inner {
+    .what-makes-us-diffirent-section .section-inner {
         flex-direction: column; 
         align-items: stretch;
         gap: 40px;
     }
 
-    .reasons-section__left {
+    .what-makes-us-diffirent-section__left {
         max-width: 100%; 
     }
 }
 
 @media (max-width: 640px) {
-    .reasons-section {
+    .what-makes-us-diffirent-section {
         padding: 40px 16px;
     }
 
-    .reasons-section .section-inner {
+    .what-makes-us-diffirent-section .section-inner {
         gap: 32px;
     }
 
-    .reasons-section__right {
+    .what-makes-us-diffirent-section__right {
         grid-template-columns: 1fr;
         gap: 12px;
     }

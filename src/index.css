@@ -27,6 +27,8 @@
   --color-black: black;
   --button-hover-darkness: 0.15;
 
+  --color-light-gray: color-mix(in oklab, oklch(0.97 0.01 250) 75%, transparent);
+
   /* Font */
   font-size: 18px;
   color: var(--text-dark);

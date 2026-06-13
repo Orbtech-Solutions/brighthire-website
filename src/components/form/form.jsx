@@ -3,6 +3,8 @@ import { useForm, ValidationError } from '@formspree/react';
 import Button from '../buttons/button';
 import './form.css';
 
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+
 export default function Form({
   fullName = true,
   jobTitle = false,
@@ -14,7 +16,7 @@ export default function Form({
   heardAbout = false,
   anythingElse = false,
 }) {
-  const [state, handleSubmit] = useForm('xykaevqq');
+  const [state, handleSubmit] = useForm(FORMSPREE_ENDPOINT);
 
   if (state.succeeded) {
     return <p>Thanks for reaching out! We'll be in touch soon.</p>;

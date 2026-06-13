@@ -26,7 +26,18 @@
     height: 180px;
     justify-content: flex-start;
 }
+.how-it-works-section a {
+    color: var(--color-primary);
+    text-decoration: none;
+    width: fit-content;
+    transition: 200ms;
 
+}
+.how-it-works-section a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+    transition: 200ms;
+}
 
 @media (max-width: 1024px) {
     .section-right {

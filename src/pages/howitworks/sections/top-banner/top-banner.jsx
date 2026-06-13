@@ -1,5 +1,5 @@
-import "./top-banner.css"
-import Heading from "../../../../components/heading/heading"
+import "./top-banner.css";
+import Heading from "../../../../components/heading/heading";
 
 export default function TopBanner() {
     return(

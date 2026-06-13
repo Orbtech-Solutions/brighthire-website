@@ -1,7 +1,7 @@
-import Heading from "../../../../components/Heading/heading"
+import Heading from "../../../../components/heading/heading.jsx"
 import "./whoweare.css"
 import imagePath from "../../../../assets/media/images/pexels-gera-cejas-3616330-37758744.jpg";
-import Card from "../../../../components/Card/card";
+import Card from "../../../../components/card/card.jsx";
 
 export default function WhoWeAre() {
     return (

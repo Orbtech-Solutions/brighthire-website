@@ -1,5 +1,5 @@
-import Heading from "../../../../components/heading/heading"
-import Button from "../../../../components/buttons/button"
+import Heading from "../../../../components/heading/heading.jsx"
+import Button from "../../../../components/buttons/button.jsx"
 import "./readytohire.css"
 
 

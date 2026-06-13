@@ -1,6 +1,6 @@
-import "./meetteam.css"
-import Heading from "../../../../components/Heading/heading"
-import Card from "../../../../components/Card/card"
+import "./meetteam.css";
+import Heading from "../../../../components/heading/heading.jsx";
+import Card from "../../../../components/card/card.jsx";
 
 
 

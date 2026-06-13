@@ -1,4 +1,4 @@
-import Heading from "../../../../components/Heading/heading"
+import Heading from "../../../../components/heading/heading.jsx"
 import "./ourstory.css"
 
 

@@ -1,6 +1,6 @@
 //import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import Button from '../buttons/button';
+import Button from '../buttons/button.jsx';
 import './form.css';
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;

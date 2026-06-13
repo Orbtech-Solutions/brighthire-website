@@ -1,4 +1,4 @@
-import Icon from '../icon/icon';
+import Icon from '../icon/icon.jsx';
 import './card.css';
 
 /*

@@ -13,7 +13,7 @@ export default function ImpactSection() {
                           body="Join now and lock in your rate permanently before our official launch. Founding clients receive priority placement, early access to the BrightHire app, and a featured logo on our community impact partner wall."
                           className="section-limited__card banner-primary"
                           >
-               <Button variant="secondary">Become a Founding Client</Button>
+               <Button link="/contact" variant="secondary">Become a Founding Client</Button>
            </Card>
         </section>
     );

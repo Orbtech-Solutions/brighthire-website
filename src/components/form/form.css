@@ -33,7 +33,7 @@
 
 /* Labels */
 .form-group label {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #1a1a2e;
 }
@@ -51,7 +51,7 @@
   padding: 12px 16px;
   border: 1.5px solid #e0e0e0;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 0.9rem;
   color: #1a1a2e;
   background: #ffffff;
   outline: none;
@@ -78,7 +78,7 @@
 
 /* Validation error messages */
 .form-group .field-error {
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #e53e3e;
   margin-top: 2px;
 }
@@ -92,7 +92,7 @@
 }
 
 .form-footer p {
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #999999;
   margin: 0;
 }

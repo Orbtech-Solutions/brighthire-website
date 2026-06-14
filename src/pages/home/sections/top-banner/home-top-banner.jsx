@@ -28,8 +28,8 @@ export default function TopBanner() {
           <div className="buttons-container">
             {/* Buttons */}
             <div className="buttons-row">
-              <Button variant="secondary">Become a Founding Client</Button>
-              <Button variant="secondary-ghost">Learn How it Works</Button>
+              <Button link="/contact" variant="secondary">Become a Founding Client</Button>
+              <Button link="/how-it-works" variant="secondary-ghost">Learn How it Works</Button>
             </div>
             <hr className="line" />
 

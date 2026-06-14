@@ -10,7 +10,8 @@
   /****** Custom styles *******/
   /* Font family */
   --font-main: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-segoe-ui: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-buttons: Arial, Helvetica, sans-serif;
 
 
   /* Colors */
@@ -45,6 +46,7 @@
 
 
   @media (max-width: 1024px) {
+    --max-width: 90%;
     font-size: 16px;
   }
 }
@@ -61,21 +63,25 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 3.1rem;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
     margin: 20px 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.4444rem;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.3rem;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 480px) {
   }
 }
 p {

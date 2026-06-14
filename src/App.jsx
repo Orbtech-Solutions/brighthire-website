@@ -8,10 +8,15 @@ import ContactPage from './pages/contactpage/contactpage.jsx';
 import Becomefoundingclientpage from "./pages/becomefoundingclientpage/becomefoundingclientpage.jsx";
 import Footer from "./components/footer/footer.jsx";
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 function App() {
 //
   return (
       <Router>
+        <ScrollToTop />
+
         <div className="app">
           <Navbar />
           <main>
@@ -28,5 +33,14 @@ function App() {
       </Router>
   )
 }
+export function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+
+}
 export default App

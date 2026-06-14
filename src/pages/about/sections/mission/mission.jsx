@@ -61,7 +61,7 @@ export default function Mission() {
                           body="A South African non-profit transforming lives through mentorship, skills development and biblical values — with 30+ facilities nationwide."
                           className="partnership-featured-card">
                       <div className="partnership-action-block">
-                        <Button  variant="primary">Visit W4AL →</Button>
+                        <Button  link="https://work4aliving.org/" variant="primary">Visit W4AL →</Button>
                       </div>
                     </Card> 
                 </div>

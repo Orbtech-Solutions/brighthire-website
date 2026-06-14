@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/single-logo.png";
 import "./footer.css";
-import { Mail, MessageCircle, ExternalLink, Globe, Camera } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -22,10 +22,7 @@ const Footer = () => {
                         work-ready graduates while investing 25% of every retainer into local skills development.
                     </p>
                     <div className="social-links">
-                        <a href="#" aria-label="LinkedIn"><ExternalLink size={16} /></a>
-                        <a href="#" aria-label="Facebook"><Globe size={16} /></a>
-                        <a href="#" aria-label="Instagram"><Camera size={16} /></a>
-                        <a href="#" aria-label="Message"><MessageCircle size={16} /></a>
+                        <p>Social Media links will apear soon</p>
                     </div>
                 </div>
                 <div>
@@ -44,9 +41,17 @@ const Footer = () => {
                             <Mail size={16} className="icon" />
                             <a href="mailto:sales@brighthire.net">sales@brighthire.net</a>
                         </li>
+                       <li className="contact-item">
+                            <MessageCircle size={16} className="icon" />
+                            <a href="https://wa.me/27646956820" target="_blank" rel="noopener noreferer">+27 64 695 6820</a>
+                        </li>
                         <li className="contact-item">
-                            <Mail size={16} className="icon" />
-                            <a href="mailto:admin@brighthire.net">admin@brighthire.net</a>
+                            <MessageCircle size={16} className="icon" />
+                            <a href="https://wa.me/27761171941" target="_blank" rel="noopener noreferer">+27 76 117 1941</a>
+                        </li>
+                        <li className="contact-item">
+                            <MessageCircle size={16} className="icon" />
+                            <a href="https://wa.me/27646528746" target="_blank" rel="noopener noreferer">+27 64 652 8746</a>
                         </li>
                     </ul>
                 </div>

@@ -29,14 +29,14 @@
 }
 
 .contact-details-section h3 {
-  font-size: 12px;
+  font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
 
   margin: 0;
 }
 .contact-details-section p {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 500;
   margin: 0; 
 }

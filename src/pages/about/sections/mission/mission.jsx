@@ -37,7 +37,7 @@ export default function Mission() {
     ]
 
     return(
-        <section>
+        <section className='our-mission-section'>
             <div className="section-inner">
                 <div className="mission-container">
                   <Heading smallText="Mission & values" heading="What we stand for." />

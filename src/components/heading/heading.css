@@ -9,7 +9,7 @@
 }
 
 .container .small-text {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
 
 /* Main section heading (e.g. "Hiring shouldn't feel like a gamble.") */
 .container .heading {
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-primary);
@@ -37,7 +37,7 @@
 
 /* Section sub-paragraph / descriptor beneath the heading */
 .container .subtext {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--text-dark);
   margin: 0;

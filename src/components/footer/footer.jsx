@@ -21,7 +21,7 @@ const Footer = () => {
                         Recruitment with purpose. Community by design. Connecting South African businesses with
                         work-ready graduates while investing 25% of every retainer into local skills development.
                     </p>
-                    <div className="social-links">
+                    <div className="social-links description">
                         <p>Social Media links will apear soon</p>
                     </div>
                 </div>

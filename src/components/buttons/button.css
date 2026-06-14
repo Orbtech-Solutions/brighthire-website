@@ -2,12 +2,21 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 600;
     padding: 14px 28px;
     border-radius: var(--rounded-full);
     border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn,
+.btn a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: var(--font-buttons);
+    line-height: 1;
 }
 .btn:hover {
     transition: var(--small-transition);
@@ -30,6 +39,7 @@
     transition: var(--small-transition);
 }
 
+/* Variants */
 .btn-primary {
     color: var(--color-white);
     background-color: var(--color-primary);

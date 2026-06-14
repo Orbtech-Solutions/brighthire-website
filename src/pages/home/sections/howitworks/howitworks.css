@@ -31,13 +31,32 @@
     text-decoration: none;
     width: fit-content;
     transition: 200ms;
+    position: relative;
 
 }
 .how-it-works-section a:hover {
     color: var(--color-secondary);
-    text-decoration: underline;
     transition: 200ms;
 }
+.how-it-works-section a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;                                    
+    height: 1px;                            
+    background-color: var(--color-secondary);
+    opacity: 0;    
+    transition: 200ms;
+    
+
+}
+.how-it-works-section a:hover::after {
+    opacity: 1; 
+    transition: 200ms;                               
+}
+
+
 
 @media (max-width: 1024px) {
     .section-right {

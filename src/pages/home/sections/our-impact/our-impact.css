@@ -54,7 +54,7 @@
 
 
 .impact-section .card p {
-    font-size: 12px;
+    font-size: 0.6rem;
     text-transform: uppercase;
     color: var(--text-light);
     letter-spacing: 1px;
@@ -62,7 +62,7 @@
     margin: 0;
 }
 .impact-section .card h3 {
-    font-size: 24px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-secondary);
     margin: 0;

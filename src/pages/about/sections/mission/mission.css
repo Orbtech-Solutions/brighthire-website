@@ -29,7 +29,7 @@
     min-height: max-content
 }
 
-.section-partnership {
+.our-mission-section .section-partnership {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
 }
 
 .section-partnership .partnership-featured-card h3 {
-    font-size: 30px;
+    font-size: 1.8rem;
     font-weight: 750;
 }
 

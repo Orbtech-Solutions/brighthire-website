@@ -11,7 +11,7 @@ export default function ReadyToHire() {
                 <Heading heading="Ready to hire the bright way?" 
                          subText="Lock in your founding client rate and start investing in your community today."
                 />
-                <Button variant="primary">Get in touch</Button>
+                <Button link="/contact" variant="primary">Get in touch</Button>
             </div>
         </section>
     )

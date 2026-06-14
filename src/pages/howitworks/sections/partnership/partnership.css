@@ -1,23 +1,15 @@
 .whole-section {
-  background: #f0f3f8;
+  background: var(--color-light-gray);
 }
 
-
-.partnership-section {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    
-}
 
 .section-partnership__card {
-   width: 100%;
-   max-width: 50vw;        
+   width: 100%;        
    margin: 0 auto;
    padding: 50px; 
    background-color: white;
 }
 
 .section-partnership__card .card-body{
-  font-size: 19px;
+  font-size: 1.2rem;
 }

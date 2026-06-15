@@ -14,7 +14,6 @@ const HomePage = () => {
         <SolutionSection />
         <HowItWorks />
         <ImpactSection />
-        <Limited />
     </>
   );
 };

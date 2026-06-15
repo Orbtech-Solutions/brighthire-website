@@ -39,7 +39,7 @@ export default function HowItWorks() {
         <section className="how-it-works-section">
             <div className="section-inner">
                 <div className="section-left">
-                    <Heading smallText="How it works" heading="Four steps. One long-term partnership." subText="A simple, structured process designed to make hiring feel calm — and to keep your business and our community thriving long after day one."/>
+                    <Heading smallText="How it works" heading="Four steps. One long-term working relationship." subText="A simple, structured process designed to make hiring feel calm — and to keep your business and our community thriving long after day one."/>
                     <Link to="/how-it-works">See the full process →</Link>
                 </div>
                 <div className="section-right">

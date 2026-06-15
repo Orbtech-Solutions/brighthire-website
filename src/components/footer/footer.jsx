@@ -43,23 +43,16 @@ const Footer = () => {
                         </li>
                        <li className="contact-item">
                             <MessageCircle size={16} className="icon" />
-                            <a href="https://wa.me/27646956820" target="_blank" rel="noopener noreferer">+27 64 695 6820</a>
+                            <a href="https://wa.me/" target="_blank" rel="noopener noreferer">Cell Number comming soon</a>
                         </li>
-                        <li className="contact-item">
-                            <MessageCircle size={16} className="icon" />
-                            <a href="https://wa.me/27761171941" target="_blank" rel="noopener noreferer">+27 76 117 1941</a>
-                        </li>
-                        <li className="contact-item">
-                            <MessageCircle size={16} className="icon" />
-                            <a href="https://wa.me/27646528746" target="_blank" rel="noopener noreferer">+27 64 652 8746</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
             <div className="bottom-bar">
                 <p>© 2026 BrightHire. All rights reserved.</p>
                 <p>
-                    In partnership with{" "}
+                    Working hand in hand with{" "}
                     <a href="https://www.work4aliving.org" target="_blank" rel="noreferrer">
                         Work 4 A Living
                     </a>

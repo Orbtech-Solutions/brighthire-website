@@ -21,7 +21,7 @@ export default function Mission() {
         },
         {
             icon: <Icon icon={<Heart size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className=""/>,
-            heading: "Honest partnership",
+            heading: "Honest communication",
             description: "Monthly check-ins and a three-month guarantee. We don't disappear after the contract is signed."
         },
         {
@@ -32,7 +32,7 @@ export default function Mission() {
         {
             icon: <Icon icon={<Sprout size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className=""/>,
             heading: "Community impact",
-            description: "25% of every retainer reinvested into the W4AL facility nearest your business — in your name."
+            description: "25% of every retainer reinvested into Work 4 A Living — in your name."
         }
     ]
 
@@ -57,7 +57,7 @@ export default function Mission() {
                     })}
                 </div>
                 <div className="section-partnership">
-                    <Card heading="In partnership with Work 4 A Living"
+                    <Card heading="Working hand in hand with Work 4 A Living"
                           body="A South African non-profit transforming lives through mentorship, skills development and biblical values — with 30+ facilities nationwide."
                           className="partnership-featured-card">
                       <div className="partnership-action-block">

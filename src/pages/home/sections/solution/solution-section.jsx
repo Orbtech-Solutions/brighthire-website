@@ -13,7 +13,7 @@ const SOLUTIONS = [
   {
     icon: <Icon icon={<HeartHandshake size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className={"background-primary"}/>,
     heading: 'We never disappear',
-    body: 'Monthly CRM check-ins with employer and employee. A three-month replacement guarantee, no questions asked.',
+    body: 'Monthly CRM check-ins with employer and employee. A three-month probation period with a replacement, free-of-charge.',
   },
   {
     icon: <Icon icon={<HandCoins size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className={"background-primary"}/>,

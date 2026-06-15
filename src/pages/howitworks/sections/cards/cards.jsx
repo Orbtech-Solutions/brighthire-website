@@ -10,7 +10,7 @@ export default function Cards() {
             id: 1,
             icon: <Icon icon={<Coins size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className={"background-primary"}/>,
             heading: "Payment structure",
-            body: "A retainer-based model designed for long-term partnerships. Placement fees never exceed 8% of annual salary — significantly below the SA industry standard of 15–27%."
+            body: "A retainer-based model designed for long-term partnerships. Placement fees never exceed 8% of annual salary — significantly below the SA industry standard of 12–15%."
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ export default function Cards() {
             id: 3,
             icon: <Icon icon={<ShieldCheck size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className={"background-primary"}/>,
             heading: "25% community donation",
-            body: "A quarter of every retainer is donated directly to the W4AL facility nearest your business — in your name, every single month."
+            body: "A quarter of every retainer is donated directly to Work 4 A Living — in your name, every single month."
         }
     ];
 

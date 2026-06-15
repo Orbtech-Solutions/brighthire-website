@@ -30,6 +30,7 @@ export default function SolutionSection() {
         <Heading 
           smallText="The Solution"
           heading="Recruitment, rebuilt around outcomes."
+          className="align-center"
         />
 
         {/* Cards row */}

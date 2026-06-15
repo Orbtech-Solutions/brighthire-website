@@ -30,7 +30,7 @@ export default function MeetTeam() {
         <section>
             <div className="meetteam-section section-inner">
                 <div className="meetteam-section-upper">
-                    <Heading smallText="Meet the team" heading="The people behind every placement." />
+                    <Heading smallText="Meet the team" heading="The people behind every placement." className="align-center"/>
                 </div>
                 <div className="team-grid">
                 {people.map((member, index) => (

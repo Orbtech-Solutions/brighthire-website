@@ -30,6 +30,7 @@ export default function ProblemSection() {
           heading="Hiring shouldn't feel like a gamble."
           subText="South African businesses are burning resources on broken recruitment.
           We've heard the same three complaints over and over."
+          className="align-center"
         />
 
         {/* Cards row */}

@@ -8,6 +8,7 @@ export default function OurStory() {
             <div className="section-inner">
                 <Heading heading="Started in Paarl. Built for South Africa."
                          smallText="Our story"
+                         className="align-center"
                 />
                 <p className="ourstory-body">
                     BrightHire was born from a simple belief: local businesses deserve local talent — and local communities deserve to share in the wins. 

@@ -10,6 +10,7 @@ export default function AboutTopBanner() {
                     heading={<>Recruitment with purpose. <span id="heading-accent">Community by design.</span></>} 
                     subText="We exist for one purpose — to connect trained, work-ready graduates with businesses that need them, while investing directly back into the communities those businesses serve."
                     spanColor="white"
+                    className="align-center"
                 />
             </div>
         </section>

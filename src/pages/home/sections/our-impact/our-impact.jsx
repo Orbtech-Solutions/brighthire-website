@@ -35,7 +35,7 @@ export default function ImpactSection() {
                     smallText="Our Impact"
                     heading="Real businesses. Real graduates. Real communities."
                     subText="Our impact counter updates monthly as we grow."
-                    className="heading-white subtext-white"
+                    className="heading-white subtext-white align-center"
                 />
                 <div className="impact-section__cards">
                     {IMPACT_STATS.map((stat) => (

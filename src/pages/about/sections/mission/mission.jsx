@@ -40,7 +40,7 @@ export default function Mission() {
         <section className='our-mission-section'>
             <div className="section-inner">
                 <div className="mission-container">
-                  <Heading smallText="Mission & values" heading="What we stand for." />
+                  <Heading smallText="Mission & values" heading="What we stand for." className="align-center" />
                 </div>
                 <div className="mission-grid">
                     {missions.map((mission, index) => {

@@ -43,7 +43,7 @@ const Footer = () => {
                         </li>
                        <li className="contact-item">
                             <MessageCircle size={16} className="icon" />
-                            <a href="https://wa.me/" target="_blank" rel="noopener noreferer">Cell Number comming soon</a>
+                            <a href="https://wa.me/27660067920" target="_blank" rel="noopener noreferer">+27 660 067 920</a>
                         </li>
                         
                     </ul>

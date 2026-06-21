@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/single-logo.png";
 import "./footer.css";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const Footer = () => {
     return (
@@ -21,9 +21,7 @@ const Footer = () => {
                         Recruitment with purpose. Community by design. Connecting South African businesses with
                         work-ready graduates while investing 25% of every retainer into local skills development.
                     </p>
-                    <div className="social-links description">
-                        <p>Social Media links will apear soon</p>
-                    </div>
+
                 </div>
                 <div>
                     <h4>Explore</h4>
@@ -41,18 +39,17 @@ const Footer = () => {
                             <Mail size={16} className="icon" />
                             <a href="mailto:sales@brighthire.net">sales@brighthire.net</a>
                         </li>
-                       <li className="contact-item">
-                            <MessageCircle size={16} className="icon" />
-                            <a href="https://wa.me/27660067920" target="_blank" rel="noopener noreferer">+27 660 067 920</a>
+                        <li className="contact-item">
+                            <Mail size={16} className="icon" />
+                            <a href="mailto:admin@brighthire.net">admin@brighthire.net</a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
             <div className="bottom-bar">
                 <p>© 2026 BrightHire. All rights reserved.</p>
                 <p>
-                    Working hand in hand with{" "}
+                    In partnership with{" "}
                     <a href="https://www.work4aliving.org" target="_blank" rel="noreferrer">
                         Work 4 A Living
                     </a>

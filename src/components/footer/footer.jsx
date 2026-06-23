@@ -39,17 +39,13 @@ const Footer = () => {
                             <Mail size={16} className="icon" />
                             <a href="mailto:sales@brighthire.net">sales@brighthire.net</a>
                         </li>
-                        <li className="contact-item">
-                            <Mail size={16} className="icon" />
-                            <a href="mailto:admin@brighthire.net">admin@brighthire.net</a>
-                        </li>
                     </ul>
                 </div>
             </div>
             <div className="bottom-bar">
                 <p>© 2026 BrightHire. All rights reserved.</p>
                 <p>
-                    In partnership with{" "}
+                    Working hand in hand with{" "}
                     <a href="https://www.work4aliving.org" target="_blank" rel="noreferrer">
                         Work 4 A Living
                     </a>

@@ -18,7 +18,7 @@ const SOLUTIONS = [
   {
     icon: <Icon icon={<HandCoins size={26} color="var(--color-secondary)" strokeWidth={1.75}/>} className={"background-primary"}/>,
     heading: '25% funds your community',
-    body: 'A quarter of every retainer is donated to the W4AL facility nearest you — in your business\'s name.',
+    body: 'A quarter of every retainer is donated to the W4AL facility closest to you — in your business\'s name.',
   },
 ];
 

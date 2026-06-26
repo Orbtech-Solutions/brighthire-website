@@ -35,7 +35,7 @@ export default function ContactDetails() {
                         <ContactDetail 
                             icon = {<Mail size={20} color="var(--color-primary)"/>}
                             heading = "Sales Enquiries"
-                            detail = "sales@brighthire.net"
+                            detail = "sales1@brighthire.net"
                         />
                         <ContactDetail 
                             icon = {<Phone size={20} color="var(--color-primary)"/>}

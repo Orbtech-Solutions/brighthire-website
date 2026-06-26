@@ -37,7 +37,7 @@ const Footer = () => {
                     <ul>
                         <li className="contact-item">
                             <Mail size={16} className="icon" />
-                            <a href="mailto:sales@brighthire.net">sales@brighthire.net</a>
+                            <a href="mailto:sales1@brighthire.net">sales1@brighthire.net</a>
                         </li>
                     </ul>
                 </div>

@@ -6,13 +6,17 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 import "./contact-details.css";
 
-export function ContactDetail({icon, heading, detail}) {
+export function ContactDetail({icon, heading, detail, link, link_detail}) {
+    const hasDetail = detail !== undefined && detail !== null && detail !== '';
+    const hasLink = link_detail !== undefined && link_detail !== null && link_detail !== '';
+
     return (
         <div className="contact-detail">
             <Icon icon={icon} borderless={true} size={40}/>
             <div className='text'>
                 <h3>{heading}</h3>
-                <p>{detail}</p>
+                {hasDetail && <p>{detail}</p>}
+                {hasLink && <a href={link}>{link_detail}</a>}
             </div>
         </div>
     )
@@ -35,12 +39,14 @@ export default function ContactDetails() {
                         <ContactDetail 
                             icon = {<Mail size={20} color="var(--color-primary)"/>}
                             heading = "Sales Enquiries"
-                            detail = "sales1@brighthire.net"
+                            link = "mailto:sales1@brighthire.net"
+                            link_detail = "sales1@brighthire.net"
                         />
                         <ContactDetail 
                             icon = {<Phone size={20} color="var(--color-primary)"/>}
                             heading = "WhatsApp/Call us"
-                            detail = "+27 660 067 920"
+                            link = "tel:+27660067920"
+                            link_detail = "+27 660 067 920"
                         />
                         <ContactDetail 
                             icon = {<MapPin size={20} color="var(--color-primary)"/>}

@@ -1,29 +1,6 @@
 import "./meetteam.css";
 import Heading from "../../../../components/heading/heading.jsx";
-import Card from "../../../../components/card/card.jsx";
 
-
-
-const people = [
-    {
-        letter: "Z",
-        name: "Zander",
-        position: "CEO & FINANCIAL DIRECTOR",
-        description: "The first person you meet and the last to sign off on your placement."
-    },
-    {
-        letter: "A",
-        name: "Anton",
-        position: "CMO",
-        description: "He makes sure the right businesses find us."
-    },
-    {
-        letter: "J",
-        name: "Johno",
-        position: "COO",
-        description: "He knows every facilitator, student and probation period by name."
-    }    
-]
 
 export default function MeetTeam() {
     return(
@@ -32,21 +9,33 @@ export default function MeetTeam() {
                 <div className="meetteam-section-upper">
                     <Heading smallText="Meet the team" heading="The people behind every placement." className="align-center"/>
                 </div>
-                <div className="team-grid">
-                {people.map((member, index) => (
-                    <Card 
-                        key={index}
-                        heading={member.name}
-                        body={member.description}
-                        className="team-member-card"
-                    >
-                        <div className="team-card-banner"> 
-                            <span>{member.letter}</span>
-                        </div>
-                        <span className="team-role">{member.position}</span>
-                    </Card>
-                ))}
-            </div>
+                <div className="align-center">
+                    <p>
+                        We are three young entrepreneurs brought together by a shared passion for business, people, and creating 
+                        meaningful change. As friends with a common vision, we recognised that South Africa’s unemployment crisis 
+                        isn’t just a statistic—it’s something that affects families, businesses, and communities every day. Rather 
+                        than standing by, we decided to build a business that could become part of the solution.
+                    </p>
+                    <p>
+                        Our faith is at the heart of who we are and how we lead. Guided by Biblical principles such as integrity, 
+                        excellence, servant leadership, and stewardship, we believe that business is an opportunity to honour God 
+                        by serving others and creating lasting value. These values shape every decision we make and the way we build 
+                        relationships with our clients, candidates, and partners.
+                    </p>
+                    <p>
+                        This vision led to the creation of BrightHire—a recruitment agency committed to connecting businesses with 
+                        reliable, work-ready talent while creating opportunities for people to build better futures. By working hand 
+                        in hand with Work 4 A Living, we aim to help businesses hire with confidence while contributing to the transformation 
+                        of lives through meaningful employment.
+                    </p>
+                    <p>
+                        For us, BrightHire is more than a business. It’s a mission to make a lasting impact—one person, one business, and one 
+                        opportunity at a time.
+                    </p>          
+                    <p>              
+                        The Bright Way To Hire.
+                    </p>
+                </div>
             </div>
         </section>
     )

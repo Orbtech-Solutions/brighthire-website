@@ -13,7 +13,6 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-secondary);
-  margin: 0;
   margin-bottom: 5px;
 }
 .container.small-text-white .small-text {
@@ -27,8 +26,6 @@
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-primary);
-  margin: 0;
-  margin-bottom: 25px;
 }
 .container.heading-white .heading {
   color: white;

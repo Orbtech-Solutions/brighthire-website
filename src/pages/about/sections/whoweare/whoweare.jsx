@@ -1,6 +1,6 @@
 import Heading from "../../../../components/heading/heading.jsx"
 import "./whoweare.css"
-import imagePath from "../../../../assets/media/images/classroom.jpg";
+import imagePath from "../../../../assets/media/images/laundry_cashier.jpg";
 import Card from "../../../../components/card/card.jsx";
 
 export default function WhoWeAre() {

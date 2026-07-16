@@ -1,5 +1,5 @@
 import Button from '../../../../components/buttons/button.jsx';
-import HandshakeImage from '../../../../assets/media/images/handshake.jpg';
+import HandshakeImage from '../../../../assets/media/images/barista_cashier.jpg';
 import './home-top-banner.css';
 
 function Stat({ name, value }) {

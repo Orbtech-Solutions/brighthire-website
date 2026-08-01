@@ -1,0 +1,437 @@
+/* aboutpage.css */
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ========== HERO SECTION ========== */
+.about-hero {
+    background: linear-gradient(135deg, #1a2b4a 0%, #0f1f3a 100%);
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.about-hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== TYPOGRAPHY ========== */
+.section-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #c9a84c;
+    margin-bottom: 1rem;
+}
+
+.section-label.center {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+}
+
+.hero-title .highlight {
+    color: #c9a84c;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
+
+.section-heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0f1f3a;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 2.25rem;
+    }
+}
+
+.section-heading.center {
+    text-align: center;
+}
+
+.body-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #4a5568;
+    margin-top: 1.5rem;
+}
+
+.body-text p {
+    margin-bottom: 1rem;
+}
+
+.body-text p:last-child {
+    margin-bottom: 0;
+}
+
+.body-text.single {
+    max-width: 48rem;
+}
+
+.body-text strong {
+    color: #0f1f3a;
+}
+
+/* ========== WHO WE ARE ========== */
+.who-we-are {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.two-column {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.column-image {
+    position: relative;
+}
+
+.rounded-image {
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.stats-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: #0f1f3a;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    max-width: 16rem;
+}
+
+@media (max-width: 1023px) {
+    .stats-badge {
+        right: 1rem;
+        bottom: -1rem;
+    }
+}
+
+.stats-number {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #c9a84c;
+    line-height: 1;
+}
+
+.stats-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+/* ========== OUR STORY ========== */
+.our-story {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* ========== MEET THE TEAM ========== */
+.meet-the-team {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+
+.team-photo {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: #0f1f3a;
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.initial-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #c9a84c;
+}
+
+.team-info {
+    padding: 1.5rem;
+}
+
+.team-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f1f3a;
+}
+
+.team-role {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #c9a84c;
+    margin-top: 0.25rem;
+}
+
+.team-bio {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+/* ========== MISSION & VALUES ========== */
+.mission-values {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.values-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.value-card {
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: #0f1f3a;
+    color: #c9a84c;
+}
+
+.value-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f1f3a;
+    margin-top: 1rem;
+}
+
+.value-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+/* ========== PARTNERSHIP BANNER ========== */
+.partnership-banner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.banner-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background: #f7fafc;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .banner-box {
+        flex-direction: row;
+    }
+}
+
+.banner-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f1f3a;
+}
+
+.banner-content p {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+    max-width: 36rem;
+}
+
+.banner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #0f1f3a;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f1f3a;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+
+.banner-link:hover {
+    background: #0f1f3a;
+    color: #ffffff;
+}
+
+/* ========== CTA SECTION ========== */
+.about-cta {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.about-cta .container.center {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0f1f3a;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+    background: rgba(15, 31, 58, 0.9);
+}
+
+/* ========== UTILITIES ========== */
+.center {
+    text-align: center;
+}

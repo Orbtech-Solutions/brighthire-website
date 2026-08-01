@@ -2,6 +2,7 @@ import Card from '../../../../components/card/card.jsx';
 import './problem-section.css';
 import Heading from '../../../../components/heading/heading.jsx';
 import { TrendingUp, UserX, Ghost } from 'lucide-react';
+import { useInView } from '../../../../hooks/useInView';
 
 const PROBLEMS = [
   {
@@ -22,6 +23,8 @@ const PROBLEMS = [
 ];
 
 export default function ProblemSection() {
+  const [ref, inView] = useInView({ threshold: 0.1 });
+
   return (
     <section className="problem-section">
       <div className="problem-section__inner">
@@ -33,15 +36,15 @@ export default function ProblemSection() {
           className="align-center"
         />
 
-        {/* Cards row */}
-        <div className="problem-section__cards">
-          {PROBLEMS.map((problem) => (
+        {/* Cards row — staggered fade-up */}
+        <div ref={ref} className="problem-section__cards">
+          {PROBLEMS.map((problem, index) => (
             <Card
               key={problem.heading}
               icon={problem.icon}
               heading={problem.heading}
               body={problem.body}
-              className="hover-float hover-accent"
+              className={`hover-float hover-accent animate-fade-up ${inView ? 'in-view' : ''} delay-${index * 150}`}
             />
           ))}
         </div>

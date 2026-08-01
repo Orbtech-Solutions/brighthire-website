@@ -3,6 +3,7 @@ import Heading from '../../../../components/heading/heading.jsx';
 import Icon from '../../../../components/icon/icon.jsx';
 import './our-impact.css';
 import { Users, Globe, Building2 } from 'lucide-react';
+import { useInView } from '../../../../hooks/useInView';
 
 const IMPACT_STATS = [
     {
@@ -22,11 +23,13 @@ const IMPACT_STATS = [
     },
 ];
 
-// Color variables
-const cardBackgound = "color-mix(in oklab, var(--color-white) 5%, transparent)"
-
+const cardBackground = "color-mix(in oklab, var(--color-white) 5%, transparent)";
+const STAGGER = [0, 150, 300];
 
 export default function ImpactSection() {
+    const [cardsRef, cardsInView] = useInView({ threshold: 0.1 });
+    const [testimonialRef, testimonialInView] = useInView({ threshold: 0.3 });
+
     return (
         <section className="impact-section">
             <div className="section-inner">
@@ -37,22 +40,26 @@ export default function ImpactSection() {
                     subText="Our impact counter updates monthly as we grow."
                     className="heading-white subtext-white align-center"
                 />
-                <div className="impact-section__cards">
-                    {IMPACT_STATS.map((stat) => (
+
+                {/* Cards — staggered fade-up */}
+                <div ref={cardsRef} className="impact-section__cards">
+                    {IMPACT_STATS.map((stat, index) => (
                         <Card
                             key={stat.heading}
                             icon={stat.icon}
-                            className="hover-float"
-                            bgColor={cardBackgound}>
+                            className={`hover-float animate-fade-up delay-${STAGGER[index]} ${cardsInView ? 'in-view' : ''}`}
+                            bgColor={cardBackground}>
                                 <p>{stat.heading}</p>
                                 <h3>{stat.body}</h3>
-
                         </Card>
-                            
                     ))}
                 </div>
 
-                <div className="impact-section__testimonial">
+                {/* Testimonial — fades in after cards */}
+                <div
+                    ref={testimonialRef}
+                    className={`impact-section__testimonial animate-fade-up delay-200 ${testimonialInView ? 'in-view' : ''}`}
+                >
                     <p>"Testimonials from our founding clients will appear here as soon as our first placements are made."</p>
                 </div>
             </div>

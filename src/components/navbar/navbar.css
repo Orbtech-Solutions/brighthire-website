@@ -1,6 +1,16 @@
 :root {
     --navbar-gap: 75px;
 }
+
+/* ── Navbar entrance animation ───────────────────────────────── */
+.animate-fade-down {
+    opacity: 0;
+    transform: translateY(-28px);
+}
+.animate-fade-down.in-view {
+    animation: fadeDown 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -88,4 +98,30 @@
         justify-content: space-between
     }
     
+}
+
+/* ── Navbar scroll shadow transition ─────────────────────────── */
+/* The shadow subtly deepens as the user scrolls — handled via
+   the .navbar-scrolled class toggled by the Navbar component.   */
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+.navbar.navbar-scrolled {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Nav link stagger entrance ───────────────────────────────── */
+.navbar-right ul li {
+    opacity: 0;
+    animation: fadeDown 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.navbar-right ul li:nth-child(1) { animation-delay: 150ms; }
+.navbar-right ul li:nth-child(2) { animation-delay: 250ms; }
+.navbar-right ul li:nth-child(3) { animation-delay: 350ms; }
+.navbar-right ul li:nth-child(4) { animation-delay: 450ms; }
+
+/* ── CTA button entrance ─────────────────────────────────────── */
+.navbar-cta {
+    opacity: 0;
+    animation: fadeDown 0.45s cubic-bezier(0.22, 1, 0.36, 1) 550ms both;
 }

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Button from '../buttons/button.jsx';
 import FullLogo from '../../assets/logo/full-logo.png';
@@ -6,12 +7,20 @@ import './navbar.css'
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     const contactPage = () => {
         navigate('/contact');
     };
 
     return (
-        <nav className="navbar">
+        <nav className={`navbar animate-fade-down in-view ${scrolled ? 'navbar-scrolled' : ''}`}>
             <div className="navbar-logo">
                 <Link to="/">
                     <img src={FullLogo} alt="Brighthire logo" className="navbar-logo-image" />

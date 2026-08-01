@@ -1,10 +1,10 @@
 import Button from '../../../../components/buttons/button.jsx';
-import HandshakeImage from '../../../../assets/media/images/barista_cashier.jpg';
+import HandshakeImage from '../../../../assets/media/images/handshake.jpg';
 import './home-top-banner.css';
 
-function Stat({ name, value }) {
+function Stat({ name, value, className = '' }) {
   return (
-    <div className="stat">
+    <div className={`stat animate-pop-in in-view ${className}`}>
       <p>{name}</p>
       <h3>{value}</h3>
     </div>
@@ -15,8 +15,8 @@ export default function TopBanner() {
   return (
     <section className="top-banner banner-primary">
       <div className="section-inner">
-        {/* Left Container */}
-        <div className="left-container">
+        {/* Left Container — slides in from the left on load */}
+        <div className="left-container animate-slide-left in-view">
           {/* Text */}
           <h1>
             <span>Not just a hire.</span> A community investment.
@@ -33,18 +33,18 @@ export default function TopBanner() {
             </div>
             <hr className="line" />
 
-            {/* Extra info */}
+            {/* Stats — staggered pop-in after the slide */}
             <div className="stats-container">
-              <Stat name="Placement Fee" value="≤ 8%" />
-              <Stat name="To community" value="25%" />
-              <Stat name="Guarantee" value="3 mo." />
+              <Stat name="Placement Fee" value="≤ 8%" className="delay-300" />
+              <Stat name="To community" value="25%"  className="delay-500" />
+              <Stat name="Guarantee"    value="3 mo." className="delay-700" />
             </div>
           </div>
         </div>
 
-        {/* Right Container */}
-        <div className="right-container">
-          <img src={HandshakeImage} alt="Handshake" />
+        {/* Right Container — slides in from the right on load */}
+        <div className="right-container animate-slide-right in-view delay-200">
+          <img src={HandshakeImage} alt="Handshake" className="float-bob" />
         </div>
       </div>
     </section>

@@ -57,7 +57,7 @@ export default function ContactDetails() {
 
                     {/* Card */}
                     <Card className="card"  bgColor={cardBackgroundColor}>
-                        <h3>Founding clients - Paarl</h3>
+                        <h3>Founding clients - Paarl & Stellenboch</h3>
                         <p>
                             We're selecting our first <span>10 founding clients</span>. Lock in your rate permanently before our official launch.
                         </p>

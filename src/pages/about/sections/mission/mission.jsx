@@ -7,6 +7,7 @@ import Heading from "../../../../components/heading/heading.jsx";
 import Card from "../../../../components/card/card.jsx";
 import "./mission.css";
 import Button from  "../../../../components/buttons/button.jsx";
+import { motion } from 'motion/react';
 
 
 
@@ -39,24 +40,41 @@ export default function Mission() {
     return(
         <section className='our-mission-section'>
             <div className="section-inner">
-                <div className="mission-container">
+                <motion.div
+                    className="mission-container"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                >
                   <Heading smallText="Mission & values" heading="What we stand for." className="align-center" />
-                </div>
+                </motion.div>
                 <div className="mission-grid">
                     {missions.map((mission, index) => {
                         return (
-                        <div key={index} className="mission-section-card">
+                        <motion.div key={index} className="mission-section-card"
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.12 }}
+                            transition={{ duration: 0.6, delay: index * 0.08 }}
+                        >
                             <Card index={index} 
                                   icon={mission.icon} 
                                   heading={mission.heading} 
                                   body={mission.description}
                                   className="mission-section-card__card"
                             />
-                        </div>
+                        </motion.div>
                         )
                     })}
                 </div>
-                <div className="section-partnership">
+                <motion.div
+                    className="section-partnership"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                >
                     <Card heading="Working hand in hand with Work 4 A Living"
                           body="A South African non-profit transforming lives through mentorship, skills development and biblical values — with 30+ facilities nationwide."
                           className="partnership-featured-card">
@@ -64,7 +82,7 @@ export default function Mission() {
                         <Button  link="https://work4aliving.org/" variant="primary">Visit W4AL →</Button>
                       </div>
                     </Card> 
-                </div>
+                </motion.div>
             </div>
         </section>
     )

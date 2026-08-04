@@ -2,12 +2,19 @@ import Heading from "../../../../components/heading/heading.jsx"
 import "./whoweare.css"
 import imagePath from "../../../../assets/media/images/laundry_cashier.jpg";
 import Card from "../../../../components/card/card.jsx";
+import { motion } from 'motion/react';
 
 export default function WhoWeAre() {
     return (
         <section>
             <div className="whoweare-section section-inner">
-                <div className="whoweare-section-left">
+                <motion.div
+                    className="whoweare-section-left"
+                    initial={{ opacity: 0, y: 20, x: -40 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                   <Heading 
                       smallText="Who we are"
                       heading="We are not here to talk about the crisis. We are here to do something about it."
@@ -29,8 +36,14 @@ export default function WhoWeAre() {
                           placement, one business, one community at a time.
                       </p>
                   </div>
-                </div>
-                <div className="whoweare-section-right">
+                </motion.div>
+                <motion.div
+                    className="whoweare-section-right"
+                    initial={{ opacity: 0, y: 20, x: 40, scale: 0.99 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.08 }}
+                >
                   <div className="whoweare-image-container">
                       <img src={imagePath} alt="" />
                   </div>
@@ -41,7 +54,7 @@ export default function WhoWeAre() {
                             className="whoweare-card banner-primary"
                             />
                   </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 import "./meetteam.css";
 import Heading from "../../../../components/heading/heading.jsx";
+import { motion } from 'motion/react';
 
 
 export default function MeetTeam() {
@@ -7,9 +8,22 @@ export default function MeetTeam() {
         <section>
             <div className="meetteam-section section-inner">
                 <div className="meetteam-section-upper">
-                    <Heading smallText="Meet the team" heading="The people behind every placement." className="align-center"/>
+                    <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Heading smallText="Meet the team" heading="The people behind every placement." className="align-center"/>
+                    </motion.div>
                 </div>
-                <div className="align-center">
+                <motion.div
+                    className="align-center"
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.6, delay: 0.06 }}
+                >
                     <p>
                         We are three young entrepreneurs brought together by a shared passion for business, people, and creating 
                         meaningful change. As friends with a common vision, we recognised that South Africa’s unemployment crisis 
@@ -35,7 +49,7 @@ export default function MeetTeam() {
                     <p>              
                         The Bright Way To Hire.
                     </p>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

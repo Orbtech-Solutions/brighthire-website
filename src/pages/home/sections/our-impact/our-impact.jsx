@@ -3,6 +3,7 @@ import Heading from '../../../../components/heading/heading.jsx';
 import Icon from '../../../../components/icon/icon.jsx';
 import './our-impact.css';
 import { Users, Globe, Building2 } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const IMPACT_STATS = [
     {
@@ -31,24 +32,38 @@ export default function ImpactSection() {
         <section className="impact-section">
             <div className="section-inner">
 
-                <Heading
-                    smallText="Our Impact"
-                    heading="Real businesses. Real graduates. Real communities."
-                    subText="Our impact counter updates monthly as we grow."
-                    className="heading-white subtext-white align-center"
-                />
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <Heading
+                        smallText="Our Impact"
+                        heading="Real businesses. Real graduates. Real communities."
+                        subText="Our impact counter updates monthly as we grow."
+                        className="heading-white subtext-white align-center"
+                    />
+                </motion.div>
                 <div className="impact-section__cards">
-                    {IMPACT_STATS.map((stat) => (
-                        <Card
+                    {IMPACT_STATS.map((stat, idx) => (
+                        <motion.div
                             key={stat.heading}
-                            icon={stat.icon}
-                            className="hover-float"
-                            bgColor={cardBackgound}>
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.15 }}
+                            transition={{ duration: 0.6, delay: idx * 0.12 }}
+                        >
+                            <Card
+                                icon={stat.icon}
+                                key={stat.heading}
+                                className="hover-float"
+                                bgColor={cardBackgound}>
                                 <p>{stat.heading}</p>
                                 <h3>{stat.body}</h3>
 
-                        </Card>
-                            
+                            </Card>
+                        </motion.div>
                     ))}
                 </div>
 

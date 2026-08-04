@@ -3,6 +3,7 @@ import Heading from '../../../../components/heading/heading.jsx';
 import Icon from '../../../../components/icon/icon.jsx';
 import './solution-section.css';
 import { GraduationCap, HeartHandshake, HandCoins } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const SOLUTIONS = [
   {
@@ -27,22 +28,36 @@ export default function SolutionSection() {
     <section className="solution-section">
       <div className="section-inner">
 
-        <Heading 
-          smallText="The Solution"
-          heading="Recruitment, rebuilt around outcomes."
-          className="align-center"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Heading 
+            smallText="The Solution"
+            heading="Recruitment, rebuilt around outcomes."
+            className="align-center"
+          />
+        </motion.div>
 
         {/* Cards row */}
         <div className="solution-section__cards">
-          {SOLUTIONS.map((solution) => (
-            <Card
+          {SOLUTIONS.map((solution, idx) => (
+            <motion.div
               key={solution.heading}
-              icon={solution.icon}
-              heading={solution.heading}
-              body={solution.body}
-              className="hover-float hover-accent"
-            />
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6, delay: idx * 0.12 }}
+            >
+              <Card
+                icon={solution.icon}
+                heading={solution.heading}
+                body={solution.body}
+                className="hover-float hover-accent"
+              />
+            </motion.div>
           ))}
         </div>
       </div>

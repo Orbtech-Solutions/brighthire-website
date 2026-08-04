@@ -3,6 +3,7 @@ import Card from '../../../../components/card/card.jsx';
 import Icon from '../../../../components/icon/icon.jsx';
 
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { motion } from 'motion/react';
 
 import "./contact-details.css";
 
@@ -28,7 +29,13 @@ export default function ContactDetails() {
     return (
         <section className='contact-details-section'>
             <div className="section-inner">
-                <div className="contact-details">
+                <motion.div
+                    className="contact-details"
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2>Contact details</h2>
                     <p>
                         Prefer email? Reach us directly — or send a WhatsApp and we'll respond fast.
@@ -62,20 +69,27 @@ export default function ContactDetails() {
                             We're selecting our first <span>10 founding clients</span>. Lock in your rate permanently before our official launch.
                         </p>
                     </Card>
-                </div>
+                </motion.div>
 
-                <Form
-                    fullName = {true}
-                    jobTitle = {true}
-                    companyNameIndustry = {true}
-                    employeesNeeded = {true}
-                    rolesRequired = {true}
-                    contactNumber = {true}
-                    email = {true}
-                    heardAbout = {true}
-                    anythingElse = {true}
-                    className="form"
-                />
+                <motion.div
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.6, delay: 0.06 }}
+                >
+                    <Form
+                        fullName = {true}
+                        jobTitle = {true}
+                        companyNameIndustry = {true}
+                        employeesNeeded = {true}
+                        rolesRequired = {true}
+                        contactNumber = {true}
+                        email = {true}
+                        heardAbout = {true}
+                        anythingElse = {true}
+                        className="form"
+                    />
+                </motion.div>
             </div>
         </section>
     )

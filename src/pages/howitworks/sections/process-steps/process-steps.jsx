@@ -1,5 +1,6 @@
 import Card from "../../../../components/card/card.jsx"
 import "./process-steps.css"
+import { motion } from 'motion/react';
 
 
 export default function ProcesSteps() {
@@ -34,15 +35,22 @@ export default function ProcesSteps() {
     return(
         <section className="process-steps-section">
             <div className="section-inner">
-                {steps.map((step) => (
-                    <div className="cards-section">
-                        <div class="cards-section__number-circle">{step.Icon}</div>
+                {steps.map((step, idx) => (
+                    <motion.div
+                        key={step.Icon + idx}
+                        className="cards-section"
+                        initial={{ opacity: 0, y: 14 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.12 }}
+                        transition={{ duration: 0.6, delay: idx * 0.08 }}
+                    >
+                        <div className="cards-section__number-circle">{step.Icon}</div>
                         <Card
                         heading={step.title}
                         body={step.description}
                         className="cards-section__cards"
                         />
-                    </div>   
+                    </motion.div>
                 ))}   
             </div>          
         </section>

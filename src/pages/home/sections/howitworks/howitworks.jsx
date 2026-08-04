@@ -2,6 +2,7 @@ import Heading from "../../../../components/heading/heading";
 import Card from "../../../../components/card/card";
 import "./howitworks.css";
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 
 //Nie die page nie, die SECTION Corne... ~ Kobus 2026
@@ -39,18 +40,33 @@ export default function HowItWorks() {
         <section className="how-it-works-section">
             <div className="section-inner">
                 <div className="section-left">
-                    <Heading smallText="How it works" heading="Four steps. One long-term working relationship." subText="A simple, structured process designed to make hiring feel calm — and to keep your business and our community thriving long after day one."/>
-                    <Link to="/how-it-works">See the full process →</Link>
+                    <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Heading smallText="How it works" heading="Four steps. One long-term working relationship." subText="A simple, structured process designed to make hiring feel calm — and to keep your business and our community thriving long after day one."/>
+                        <Link to="/how-it-works">See the full process →</Link>
+                    </motion.div>
                 </div>
                 <div className="section-right">
-                    {steps.map((step) => (
-                        <Card
+                    {steps.map((step, idx) => (
+                        <motion.div
                             key={step.key}
-                            textIcon={step.number}
-                            heading={step.heading}
-                            body={step.body}
-                            className="hover-float hover-accent"
-                        />
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.12 }}
+                            transition={{ duration: 0.6, delay: idx * 0.12 }}
+                        >
+                            <Card
+                                key={step.key}
+                                textIcon={step.number}
+                                heading={step.heading}
+                                body={step.body}
+                                className="hover-float hover-accent"
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>

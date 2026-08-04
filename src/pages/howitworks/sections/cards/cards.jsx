@@ -2,6 +2,7 @@ import Card from "../../../../components/card/card.jsx";
 import { Coins, RefreshCcw, ShieldCheck } from 'lucide-react';
 import "./cards.css";
 import Icon from "../../../../components/icon/icon.jsx";
+import { motion } from 'motion/react';
 
 
 export default function Cards() {
@@ -29,14 +30,22 @@ export default function Cards() {
     return (
         <section>
             <div className="section-inner cards-container">
-            {statements.map((statement) => (
-                <Card 
+            {statements.map((statement, idx) => (
+                <motion.div
                     key={statement.id}
-                    icon={statement.icon}
-                    heading={statement.heading}
-                    body={statement.body}
-                    className="section-cards hover-float hover-accent"
-                />
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.12 }}
+                    transition={{ duration: 0.6, delay: idx * 0.12 }}
+                >
+                    <Card 
+                        key={statement.id}
+                        icon={statement.icon}
+                        heading={statement.heading}
+                        body={statement.body}
+                        className="section-cards hover-float hover-accent"
+                    />
+                </motion.div>
             ))}
             </div>
         </section>

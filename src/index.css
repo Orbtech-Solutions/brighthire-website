@@ -15,18 +15,18 @@
 
 
   /* Colors */
-  --color-primary: oklch(32% .09 260);
-  --color-primary-deep: oklch(24% .08 262);;
+  --color-primary: oklch(36% 0.12 260);
+  --color-primary-deep: oklch(24% 0.10 262);
 
-  --color-secondary: oklch(0.78 0.13 82);
-  --color-secondary-soft: oklch(92% .06 84);
+  --color-secondary: oklch(82% 0.17 82);
+  --color-secondary-soft: oklch(92% 0.08 84);
   
   --text-dark: oklch(0.48 0.03 258);
   --text-light: oklch(76.676% 0.00009 271.152);
 
   --color-white: white;
   --color-black: black;
-  --button-hover-darkness: 0.15;
+  --button-hover-darkness: 0.1;
 
   --color-light-gray: color-mix(in oklab, oklch(0.97 0.01 250) 75%, transparent);
 

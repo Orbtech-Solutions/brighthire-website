@@ -2,6 +2,7 @@ import Card from '../../../../components/card/card.jsx';
 import Heading from '../../../../components/heading/heading.jsx';
 import Icon from '../../../../components/icon/icon.jsx';
 import './our-impact.css';
+import { Reveal } from '../../../../components/motion/motion.jsx';
 import { Users, Globe, Building2 } from 'lucide-react';
 
 const IMPACT_STATS = [
@@ -38,9 +39,10 @@ export default function ImpactSection() {
                     className="heading-white subtext-white align-center"
                 />
                 <div className="impact-section__cards">
-                    {IMPACT_STATS.map((stat) => (
+                    {IMPACT_STATS.map((stat, i) => (
                         <Card
                             key={stat.heading}
+                            index={i}
                             icon={stat.icon}
                             className="hover-float"
                             bgColor={cardBackgound}>
@@ -52,9 +54,9 @@ export default function ImpactSection() {
                     ))}
                 </div>
 
-                <div className="impact-section__testimonial">
+                <Reveal className="impact-section__testimonial" delay={0.2}>
                     <p>"Testimonials from our founding clients will appear here as soon as our first placements are made."</p>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

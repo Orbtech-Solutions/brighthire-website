@@ -15,11 +15,13 @@
 
 
   /* Colors */
-  --color-primary: oklch(36% 0.12 260);
-  --color-primary-deep: oklch(24% 0.10 262);
+  /* Brand colors — taken directly from the logo */
+  --color-logo-blue: #1A4499;                  /* exact logo blue (≈ oklch(41% 0.147 262)) */
+  --color-primary: #10317A;                    /* logo blue, darkened for a more corporate feel (≈ oklch(34% 0.13 263)) */
+  --color-primary-deep: #051748;               /* deepest shade, for gradients (≈ oklch(23% 0.095 264)) */
 
-  --color-secondary: oklch(82% 0.17 82);
-  --color-secondary-soft: oklch(92% 0.08 84);
+  --color-secondary: #FFBE1A;                  /* logo gold  (≈ oklch(84% 0.168 83)) */
+  --color-secondary-soft: oklch(94% 0.07 85);
   
   --text-dark: oklch(0.48 0.03 258);
   --text-light: oklch(76.676% 0.00009 271.152);
@@ -88,4 +90,16 @@ h2 {
 p {
   margin: 0;
   margin-bottom: 25px;
+}
+
+/* Respect the OS "reduce motion" setting for CSS transitions too
+   (Motion animations are handled by <MotionConfig reducedMotion="user">). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

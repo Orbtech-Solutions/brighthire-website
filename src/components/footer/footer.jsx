@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo/single-logo.png";
+import logo from "../../assets/logo/Icon.svg";
 import "./footer.css";
 import { Mail } from "lucide-react";
 
@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="logo-section">
                     <div className="logo-row">
                         <div className="logo-box">
-                            <img src={logo} alt="BrightHire" width={32} height={32} />
+                            <img src={logo} alt="BrightHire" width={24} height={32} />
                         </div>
                         <div>
                             <div className="brand-name">BrightHire</div>

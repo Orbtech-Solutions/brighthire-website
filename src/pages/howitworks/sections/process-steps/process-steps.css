@@ -45,5 +45,11 @@
     position: absolute;
     left: -25px;
     top: -25px;   
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(27, 43, 94, 0.25);
 }
 

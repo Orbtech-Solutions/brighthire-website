@@ -28,8 +28,9 @@ export default function WhatMakesUsDiffirent() {
                 <div className="what-makes-us-diffirent-section__right">
                     {reasons.map((reason, index) => (
                         <Card 
-                            key={index} /* Added key here for React list rendering */
-                            textIcon={<CircleCheck color="#E5AF3C"/>} 
+                            key={index}
+                            index={index}
+                            textIcon={<CircleCheck color="var(--color-secondary)"/>} 
                             body={reason.description} 
                             className="what-makes-us-diffirent-section__right-card"
                         />

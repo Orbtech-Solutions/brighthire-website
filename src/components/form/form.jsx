@@ -1,6 +1,8 @@
 //import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'motion/react';
 import Button from '../buttons/button.jsx';
+import { EASE, VIEWPORT } from '../motion/variants.js';
 import './form.css';
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
@@ -19,11 +21,26 @@ export default function Form({
   const [state, handleSubmit] = useForm(FORMSPREE_ENDPOINT);
 
   if (state.succeeded) {
-    return <p>Thanks for reaching out! We'll be in touch soon.</p>;
+    return (
+      <motion.p
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: EASE }}
+      >
+        Thanks for reaching out! We'll be in touch soon.
+      </motion.p>
+    );
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <motion.form
+      className="form"
+      onSubmit={handleSubmit}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={VIEWPORT}
+      transition={{ duration: 0.6, ease: EASE, delay: 0.15 }}
+    >
       <div className="form-grid">
 
         {fullName && (
@@ -106,6 +123,6 @@ export default function Form({
         </Button>
         <p>Your enquiry goes to admin@brighthire.net. We respond within one business day.</p>
       </div>
-    </form>
+    </motion.form>
   );
 }

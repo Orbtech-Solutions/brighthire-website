@@ -1,4 +1,5 @@
 import Heading from "../../../../components/heading/heading.jsx"
+import { Reveal } from "../../../../components/motion/motion.jsx"
 import "./ourstory.css"
 
 
@@ -10,12 +11,12 @@ export default function OurStory() {
                          smallText="Our story"
                          className="align-center"
                 />
-                <p className="ourstory-body">
+                <Reveal as="p" className="ourstory-body" delay={0.15}>
                     BrightHire was born from a simple belief: local businesses deserve local talent — and local communities deserve to share in the wins. 
                     We started in Paarl, working with the businesses we know best, and we're growing nationally without losing what makes us different. 
                     Every placement is a chance to invest in a community. 
                     Every retainer keeps that promise alive.
-                </p>
+                </Reveal>
 
             </div>
         </section>

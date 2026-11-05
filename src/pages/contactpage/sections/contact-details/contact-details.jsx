@@ -4,6 +4,7 @@ import Icon from '../../../../components/icon/icon.jsx';
 
 import { Mail, Phone, MapPin } from 'lucide-react';
 
+import { Reveal } from "../../../../components/motion/motion.jsx";
 import "./contact-details.css";
 
 export function ContactDetail({icon, heading, detail, link, link_detail}) {
@@ -28,7 +29,7 @@ export default function ContactDetails() {
     return (
         <section className='contact-details-section'>
             <div className="section-inner">
-                <div className="contact-details">
+                <Reveal className="contact-details">
                     <h2>Contact details</h2>
                     <p>
                         Prefer email? Reach us directly — or send a WhatsApp and we'll respond fast.
@@ -62,7 +63,7 @@ export default function ContactDetails() {
                             We're selecting our first <span>10 founding clients</span>. Lock in your rate permanently before our official launch.
                         </p>
                     </Card>
-                </div>
+                </Reveal>
 
                 <Form
                     fullName = {true}

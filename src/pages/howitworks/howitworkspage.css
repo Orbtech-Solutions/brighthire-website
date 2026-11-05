@@ -6,11 +6,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: oklch(24% .08 262);
+    background-color: var(--color-primary-deep);
 }
 
 .top-section p {
-    color: #E5AF3C;
+    color: var(--color-secondary);
 }
 
 .top-section h1 {
@@ -48,9 +48,9 @@
 .cards-section__number-circle {
     width: 55px;
     height: 55px;
-    background-color: oklch(32% .09 260);
+    background-color: var(--color-primary);
     border-radius: 50%;
-    color: #E5AF3C;
+    color: var(--color-secondary);
     font-family: Arial, sans-serif; 
     font-weight: bold;
     font-size: 1.2rem;
@@ -82,7 +82,7 @@
     padding-left: 6vw;
 }
 .reasons-section__left p {
-   color:#E5AF3C;
+   color:var(--color-secondary);
 }
 .reasons-section__left h1 {
    font-size: 2.5rem

@@ -23,15 +23,18 @@
   box-shadow: 0 4px 16px rgba(27, 43, 94, 0.1);
   overflow: hidden;
   cursor: default;
+  translate: 0 0;
   transition:
-    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    translate 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-/* Lift and intensify the card only when .hover-float is applied. */
+/* Lift and intensify the card only when .hover-float is applied.
+   Uses `translate` (not `transform`) because Motion owns `transform`
+   for the scroll-reveal animation. */
 .hover-float:hover {
-  transform: translateY(-8px);
+  translate: 0 -8px;
   box-shadow: 0 16px 40px rgba(27, 43, 94, 0.18);
   border-color: rgba(27, 43, 94, 0.16);
 }

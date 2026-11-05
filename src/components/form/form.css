@@ -40,7 +40,7 @@
 
 /* Required asterisk */
 .form-group label .required {
-  color: #e1af4a;
+  color: var(--color-secondary);
   margin-left: 2px;
 }
 
@@ -62,8 +62,8 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #152f5d;
-  box-shadow: 0 0 0 3px rgba(21, 47, 93, 0.08);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 12%, transparent);
 }
 
 .form-group input::placeholder,

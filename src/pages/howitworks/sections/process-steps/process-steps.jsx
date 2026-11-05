@@ -1,4 +1,6 @@
 import Card from "../../../../components/card/card.jsx"
+import { motion } from "motion/react"
+import { EASE, VIEWPORT } from "../../../../components/motion/variants.js"
 import "./process-steps.css"
 
 
@@ -34,15 +36,32 @@ export default function ProcesSteps() {
     return(
         <section className="process-steps-section">
             <div className="section-inner">
-                {steps.map((step) => (
-                    <div className="cards-section">
-                        <div class="cards-section__number-circle">{step.Icon}</div>
+                {steps.map((step, i) => (
+                    // Each step rises in, then its number badge pops into place
+                    <motion.div
+                        key={step.Icon}
+                        className="cards-section"
+                        initial={{ opacity: 0, y: 32 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={VIEWPORT}
+                        transition={{ duration: 0.6, ease: EASE, delay: (i % 2) * 0.1 }}
+                    >
+                        <motion.div
+                            className="cards-section__number-circle"
+                            initial={{ opacity: 0, scale: 0.4 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={VIEWPORT}
+                            transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.25 + (i % 2) * 0.1 }}
+                        >
+                            {step.Icon}
+                        </motion.div>
                         <Card
                         heading={step.title}
                         body={step.description}
                         className="cards-section__cards"
+                        reveal={false}
                         />
-                    </div>   
+                    </motion.div>
                 ))}   
             </div>          
         </section>

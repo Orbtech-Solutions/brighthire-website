@@ -35,9 +35,10 @@ export default function ProblemSection() {
 
         {/* Cards row */}
         <div className="problem-section__cards">
-          {PROBLEMS.map((problem) => (
+          {PROBLEMS.map((problem, i) => (
             <Card
               key={problem.heading}
+              index={i}
               icon={problem.icon}
               heading={problem.heading}
               body={problem.body}

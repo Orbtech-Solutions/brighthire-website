@@ -1,4 +1,6 @@
+import { motion } from 'motion/react';
 import Icon from '../icon/icon.jsx';
+import { fadeUp, VIEWPORT } from '../motion/variants.js';
 import './card.css';
 
 /*
@@ -9,18 +11,33 @@ import './card.css';
  *  - body        {string}               Card description (omit to hide)
  *  - className   {string}               Extra class(es) appended to the root element
  *  - color       {string}               Color variant passed to Icon component (default: 'primary')
+ *  - index       {number}               Position in a list — staggers the scroll reveal (default: 0)
+ *  - reveal      {boolean}              Fade the card up when scrolled into view (default: true)
  *
  * Variants:
  *  - default (icon):   icon prop → renders image or JSX in a boxed wrapper
  *  - text-icon:        textIcon prop → renders styled text label inline (no box)
  */
-export default function Card ({ children, icon, textIcon, heading, body, className = '', color='primary', bgColor}) {
+export default function Card ({ children, icon, textIcon, heading, body, className = '', color='primary', bgColor, index = 0, reveal = true }) {
   const variant = textIcon ? 'text-icon' : 'icon';
 
+  // Reveal uses `transform`; the hover lift (.hover-float) uses the separate CSS
+  // `translate` property so the two never fight each other.
+  const revealProps = reveal
+    ? {
+        variants: fadeUp,
+        custom: Math.min(index, 8) * 0.08,
+        initial: 'hidden',
+        whileInView: 'visible',
+        viewport: VIEWPORT,
+      }
+    : {};
+
   return (
-    <div 
-      style={{backgroundColor: bgColor}} 
-      className={`card card--${variant} color-${color} ${className} ${className} `.trim()}>
+    <motion.div
+      style={{backgroundColor: bgColor}}
+      className={`card card--${variant} color-${color} ${className}`.trim()}
+      {...revealProps}>
 
       {/* Icon component handles both image icons and text icons */}
       {(icon || textIcon) && (
@@ -34,9 +51,8 @@ export default function Card ({ children, icon, textIcon, heading, body, classNa
 
       { children }
 
-      
+
       <span className="card-accent" aria-hidden="true" />
-    </div>
+    </motion.div>
   );
 };
-

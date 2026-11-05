@@ -29,9 +29,10 @@ export default function Cards() {
     return (
         <section>
             <div className="section-inner cards-container">
-            {statements.map((statement) => (
+            {statements.map((statement, i) => (
                 <Card 
                     key={statement.id}
+                    index={i}
                     icon={statement.icon}
                     heading={statement.heading}
                     body={statement.body}

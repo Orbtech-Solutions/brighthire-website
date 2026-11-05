@@ -35,9 +35,10 @@ export default function SolutionSection() {
 
         {/* Cards row */}
         <div className="solution-section__cards">
-          {SOLUTIONS.map((solution) => (
+          {SOLUTIONS.map((solution, i) => (
             <Card
               key={solution.heading}
+              index={i}
               icon={solution.icon}
               heading={solution.heading}
               body={solution.body}
